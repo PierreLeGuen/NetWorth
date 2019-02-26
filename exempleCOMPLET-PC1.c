@@ -53,7 +53,6 @@ int main (int argc, char **argv)
 	priseEmission  = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
 	priseReception = creePriseReception(PORT_RECEPTION);
 
-	printf("J'envoie le 1er paquet \n");
 	printf("Touche d pour demarrer...\n");
   	while (getchar() != 'd'); /* temporisation */
 	printf("Ajouter nouveau pc ? o/n \n");
@@ -64,7 +63,7 @@ int main (int argc, char **argv)
 	}
 	else
 	{
-		"Pourquoi lancer le programme ??"
+		printf("Pourquoi lancer le programme ?? \n")
 	}
 	printf("Vous êtes le pc n°: %d\n", numero);
 
@@ -87,8 +86,9 @@ int main (int argc, char **argv)
 	{
 		char message[100] = NULL;
 		printf("Saisir message :\n");
+		fgets(message, 100, stdin)
 
-		printf("Touche e pour continuer...\n");
+		printf("Touche e pour envoyer le message\n");
   		while (getchar() != 'e'); /* temporisation */
 
 		memset (buffer, '\0', sizeof(buffer));
@@ -103,9 +103,11 @@ int main (int argc, char **argv)
 		memset (buffer, '\0', sizeof(buffer));
 
 		recoit(priseReception, buffer, sizeof(buffer)-1);
-
+		if (buffer == '$ù$')
+		{
+			etat = envoie;
+		}
 		sscanf(buffer, "%15s%120s", &p.adresse, &p.message);
-
 		traitePaquet(&p);
 	} while(etat = ecoute);
 
