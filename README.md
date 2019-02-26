@@ -1,2 +1,1 @@
-# networth
-### Networth, le réseau qui vaut le coup
+# Networth, le réseau qui vaut le coup
