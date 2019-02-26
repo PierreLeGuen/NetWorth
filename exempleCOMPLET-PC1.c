@@ -8,12 +8,17 @@
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
 
-#define ADRESSE_EMETTEUR	"127.0.0.1"
-#define ADRESSE_RECEPTEUR	"127.0.0.2"
-#define PORT_RECEPTION		1920
-#define PORT_EMISSION		1990
 #define LONGUEUR_ADRESSE	16
 #define LONGUEUR_MESSAGE	121
+
+enum etat
+{
+	ecoute,
+	envoie
+}
+
+int repertoire[100];
+int numero = 0;
 
 typedef struct paquet
 {
@@ -51,26 +56,60 @@ int main (int argc, char **argv)
 	printf("J'envoie le 1er paquet \n");
 	printf("Touche d pour demarrer...\n");
   	while (getchar() != 'd'); /* temporisation */
-	sprintf(buffer, "%15s%120s", "127.0.0.3", "salut,ca va ?");
-	envoie(priseEmission, buffer, strlen(buffer));
-	/* ex. remplissage 1er paquet puis emission */
+	printf("Ajouter nouveau pc ? o/n \n");
+	if (getchar() = 'r')
+	{
+		numereo += ;1
+		repertoire[numero] = numero;
+	}
+	else
+	{
+		"Pourquoi lancer le programme ??"
+	}
+	printf("Vous êtes le pc n°: %d\n", numero);
 
-	printf("PC1 demarre ...\n\n");
-
-	/* boucle en emission */
+	printf("e pour envoyer un message, r pour passer en mode écoute\n");
+	if (getchar() != 'e' && getchar() != 'r')
+	{
+		printf("Erreur, veuillez re-saisir \n");
+	}
+	if (getchar() = 'e')
+	{
+		etat = envoie;
+	}
+	if (getchar() = 'r')
+	{
+		etat = ecoute;
+	}
 	do
 	{
-		printf("Envoyer un autre paquet ? \n");
+	do
+	{
+		char message[100] = NULL;
+		printf("Saisir message :\n");
+
 		printf("Touche e pour continuer...\n");
   		while (getchar() != 'e'); /* temporisation */
 
 		memset (buffer, '\0', sizeof(buffer));
 
-		sprintf(buffer, "%15s%120s", "127.0.0.3", "repond mdr");
+		sprintf(buffer, "%15s%120s", repertoire[num_dest], message);
 
 		envoie(priseEmission, buffer, strlen(buffer));
 
-	} while (1); /* boucle infinie */
+	} while (etat = envoie); /* boucle infinie */
+	do
+	{
+		memset (buffer, '\0', sizeof(buffer));
+
+		recoit(priseReception, buffer, sizeof(buffer)-1);
+
+		sscanf(buffer, "%15s%120s", &p.adresse, &p.message);
+
+		traitePaquet(&p);
+	} while(etat = ecoute);
+
+} while(1);
 
   return 0;
 }
