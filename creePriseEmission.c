@@ -17,9 +17,9 @@
 
 int creePriseEmission (char *server, int port)
 {
-    int			sock;
-    struct sockaddr_in	address;
-    struct hostent     *hp;
+    int	    sock;
+    struct  sockaddr_in	address;
+    struct  hostent     *hp;
 
 /*
  * Cr�ation d'une socket UDP :
