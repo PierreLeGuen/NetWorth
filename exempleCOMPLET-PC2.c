@@ -29,27 +29,20 @@ int main(int argc, char **argv) {
     char *initHost;
     int numero = 1;
     int destHostNumber = -1;
-    char buffer[+LONGUEUR_MESSAGE];
+    char buffer[LONGUEUR_MESSAGE];
     Paquet currPacket;
     bool stop = false;
 
+    initHost = initPC(numero);
 
-    printf("Appuyer ENTREE pour demarrer...\n");
-    // while (getchar() != '\n');
-    printf("Ajouter nouveau pc ? o/n \n");
-    if (1) {
-        initHost = initPC(numero);
+    PC2.HOST_NUMBER = initHost[0] - 48;
+    PC2.PRISE_EMISSION = initHost[2] - 48;
+    PC2.PRISE_RECEPTION = initHost[4] - 48;
+    char *pend = &initHost[34] + 5;
+    PC2.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
+    memcpy(PC2.ADRESSE, &initHost[6], 13);
+    numero += 1;
 
-        PC2.HOST_NUMBER = initHost[0] - 48;
-        PC2.PRISE_EMISSION = initHost[2] - 48;
-        PC2.PRISE_RECEPTION = initHost[4] - 48;
-        char *pend = &initHost[34] + 5;
-        PC2.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
-        memcpy(PC2.ADRESSE, &initHost[6], 13);
-        numero += 1;
-    } else {
-        return EXIT_FAILURE;
-    }
     printf("Vous êtes le pc n°: %d\n", PC2.HOST_NUMBER);
 
 
@@ -90,13 +83,10 @@ int main(int argc, char **argv) {
             sprintf(buffer, "%d,%d,%s", PC2.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
             envoie(PC2.PRISE_EMISSION, buffer, strlen(buffer));
         } else if (currStatus == listen) {
-            int priseR, priseE;
-            priseR = creePriseReception(10050);
-            priseE = creePriseEmission("192.168.0.102", 10100);
             Host senderHost;
             memset(buffer, '\0', sizeof(buffer));
             printf("Prise RECEP %d", PC2.PRISE_RECEPTION);
-            recoit(priseR, buffer, sizeof(buffer) - 1);
+            recoit(PC2.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
             sscanf(buffer, "%d,%d,%120s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
             traitePaquet(currPacket, PC2);
         } else {

@@ -28,16 +28,16 @@ char *initPC(int numPC) {
 
     char *ADRESSE_EMETTEUR = malloc(13);
     char *ADRESSE_RECEPTEUR = malloc(13);
-    strcpy(ADRESSE_EMETTEUR, "192.168.0.100");
-    strcpy(ADRESSE_RECEPTEUR, "192.168.0.100");
+    strcpy(ADRESSE_EMETTEUR, "192.168.0.0");
+    strcpy(ADRESSE_RECEPTEUR, "192.168.0.0");
 
     sprintf(charNumPCSender, "%d", numPC);
     sprintf(charNumPCReceiver, "%d", numPC + 1);
 
 
     if (numPC < 10) {
-        ADRESSE_EMETTEUR[12] = charNumPCSender[0];
-        ADRESSE_RECEPTEUR[12] = charNumPCReceiver[0];
+        ADRESSE_EMETTEUR[10] = charNumPCSender[0];
+        ADRESSE_RECEPTEUR[10] = charNumPCReceiver[0];
     } else {
         printf("Too much hosts, not supported yet");
         return NULL;

@@ -35,25 +35,17 @@ int main(int argc, char **argv) {
     Paquet currPacket;
     bool stop = false;
 
+    initHost = initPC(numero);
 
-    printf("Appuyer ENTREE pour demarrer...\n");
-    // while (getchar() != '\n');
-    printf("Ajouter nouveau pc ? o/n \n");
-    if (1) {
-        initHost = initPC(numero);
+    PC1.HOST_NUMBER = initHost[0] - 48;
+    PC1.PRISE_EMISSION = initHost[2] - 48;
+    PC1.PRISE_RECEPTION = initHost[4] - 48;
+    char *pend = &initHost[34] + 5;
+    PC1.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
+    memcpy(PC1.ADRESSE, &initHost[6], 13);
+    numero += 1;
 
-        PC1.HOST_NUMBER = initHost[0] - 48;
-        PC1.PRISE_EMISSION = initHost[2] - 48;
-        PC1.PRISE_RECEPTION = initHost[4] - 48;
-        char *pend = &initHost[34] + 5;
-        PC1.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
-        memcpy(PC1.ADRESSE, &initHost[6], 13);
-        numero += 1;
-    } else {
-        return EXIT_FAILURE;
-    }
     printf("Vous êtes le pc n°: %d\n", PC1.HOST_NUMBER);
-
 
     while (!stop) {
         while (currStatus == standby) {
@@ -86,6 +78,10 @@ int main(int argc, char **argv) {
             currPacket.HOST_NUMBER = destHostNumber;
             printf("Presser ENTREE pour envoyer le message\n");
             while (getchar() != '\n');
+            int priseE, priseR;
+            priseR = creePriseReception(10000);
+            priseE = creePriseEmission("192.168.0.101", 10050);
+            printf("PC 1 Prise R: %d , Prise E : %d", priseR, priseE);
 
             memset(buffer, '\0', sizeof(buffer));
 
