@@ -23,7 +23,7 @@ void traitePaquet(Paquet receivedPacket, Host AnHost) {
         /* sinon */
         printf("Je ne suis PAS le destinataire. \n");
         printf("DEST : %*d\n\n", 20, receivedPacket.HOST_NUMBER);
-        printf("Routage vers destinnataire\n");
+        printf("Routage vers destinataire\n");
         memset(buffer, '\0', sizeof(buffer));
 
         sprintf(buffer, "%d%120s", receivedPacket.HOST_NUMBER, receivedPacket.MESSAGE);

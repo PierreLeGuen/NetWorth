@@ -40,8 +40,7 @@ int main(int argc, char **argv) {
     PC1.HOST_NUMBER = initHost[0] - 48;
     PC1.PRISE_EMISSION = initHost[2] - 48;
     PC1.PRISE_RECEPTION = initHost[4] - 48;
-    char *pend = &initHost[34] + 5;
-    PC1.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
+    PC1.PORT_EMISSION = (int) strtol(&initHost[36], NULL, 10);
     memcpy(PC1.ADRESSE, &initHost[6], 13);
     numero += 1;
 
@@ -78,11 +77,6 @@ int main(int argc, char **argv) {
             currPacket.HOST_NUMBER = destHostNumber;
             printf("Presser ENTREE pour envoyer le message\n");
             while (getchar() != '\n');
-            int priseE, priseR;
-            priseR = creePriseReception(10000);
-            priseE = creePriseEmission("192.168.0.101", 10050);
-            printf("PC 1 Prise R: %d , Prise E : %d", priseR, priseE);
-
             memset(buffer, '\0', sizeof(buffer));
 
             sprintf(buffer, "%d,%d,%s", PC1.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
