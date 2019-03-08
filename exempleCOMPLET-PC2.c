@@ -3,72 +3,107 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "initPC.h"
+#include "packets.h"
 
 #include "primitives.h"
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
 
-#define ADRESSE_EMETTEUR	"127.0.0.2"
-#define ADRESSE_RECEPTEUR	"127.0.0.3"
-#define PORT_RECEPTION		10020
-#define PORT_EMISSION		10030
-#define LONGUEUR_ADRESSE	16
-#define LONGUEUR_MESSAGE	121
+#define LONGUEUR_MESSAGE    128
+typedef enum {
+    false, true
+} bool;
 
-typedef struct paquet
-{
-	char adresse[LONGUEUR_ADRESSE];
-	char message[LONGUEUR_MESSAGE];
-} Paquet;
+enum State {
+    standby, listen, send
+} currStatus;
+
 /* Paquet <=> struct paquet */
 
-void traitePaquet(Paquet *p)
-{
-    int priseEmission1;
-    char buffer[LONGUEUR_MESSAGE];
+int main(int argc, char **argv) {
+    char line[10];
+    Host PC2;
 
-    if (strcmp(ADRESSE_EMETTEUR, p->adresse) == 0)
-        /* si je suis le destinataire du paquet */
-    {
-        printf("Je suis le destinataire. \n");
-        printf("MSG : %*s \n\n",20, p->message);
+    char choix = 0;
+    char *initHost;
+    int numero = 1;
+    int destHostNumber = -1;
+    char buffer[+LONGUEUR_MESSAGE];
+    Paquet currPacket;
+    bool stop = false;
 
+
+    printf("Appuyer ENTREE pour demarrer...\n");
+    // while (getchar() != '\n');
+    printf("Ajouter nouveau pc ? o/n \n");
+    if (1) {
+        initHost = initPC(numero);
+
+        PC2.HOST_NUMBER = initHost[0] - 48;
+        PC2.PRISE_EMISSION = initHost[2] - 48;
+        PC2.PRISE_RECEPTION = initHost[4] - 48;
+        char *pend = &initHost[34] + 5;
+        PC2.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
+        memcpy(PC2.ADRESSE, &initHost[6], 13);
+        numero += 1;
+    } else {
+        return EXIT_FAILURE;
     }
-    else
-    {
-        /* sinon */
-        priseEmission1  = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
-        printf("Je ne suis PAS le destinataire. \n");
-        printf("DEST : %*s\n\n", 20, p->adresse);
-        printf("Routage vers destinnataire\n");
-        memset (buffer, '\0', sizeof(buffer));
+    printf("Vous êtes le pc n°: %d\n", PC2.HOST_NUMBER);
 
-        sprintf(buffer, "%15s%120s", p->adresse, p->message);
-        envoie(priseEmission1, buffer, strlen(buffer));
+
+    while (!stop) {
+        while (currStatus == standby) {
+            switch (choix) {
+                case 's' :
+                    currStatus = send;
+                    break;
+                case 'l':
+                    currStatus = listen;
+                    break;
+                case 'q':
+                    stop = true;
+                    return EXIT_SUCCESS;
+                default:
+                    printf("s (aka send) pour envoyer un message, l (aka listen) pour passer en mode écoute, ou q pour quitter\n");
+                    if (fgets(line, 10, stdin) && sscanf(line, "%c", &choix) != 1)
+                        choix = 0;
+            }
+        }
+
+        if (currStatus == send) {
+            char message[100] = {0};
+            printf("Saisir message :\n");
+            fgets(currPacket.MESSAGE, 100, stdin);
+
+            printf("Destinataire ?");
+            if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
+                destHostNumber = 0;
+
+            currPacket.HOST_NUMBER = destHostNumber;
+            printf("Presser ENTREE pour envoyer le message\n");
+            while (getchar() != '\n');
+
+            memset(buffer, '\0', sizeof(buffer));
+
+            sprintf(buffer, "%d,%d,%s", PC2.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
+            envoie(PC2.PRISE_EMISSION, buffer, strlen(buffer));
+        } else if (currStatus == listen) {
+            int priseR, priseE;
+            priseR = creePriseReception(10050);
+            priseE = creePriseEmission("192.168.0.102", 10100);
+            Host senderHost;
+            memset(buffer, '\0', sizeof(buffer));
+            printf("Prise RECEP %d", PC2.PRISE_RECEPTION);
+            recoit(priseR, buffer, sizeof(buffer) - 1);
+            sscanf(buffer, "%d,%d,%120s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
+            traitePaquet(currPacket, PC2);
+        } else {
+            printf("ERROR : WRONG INPUT");
+        }
+        currStatus = standby;
+        choix = 0;
     }
-}
-
-int main (int argc, char **argv)
-{
-	int    priseEmission, priseReception;
-	char   buffer[LONGUEUR_ADRESSE + LONGUEUR_MESSAGE];
-	Paquet p;
-
-	priseEmission  = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
-	priseReception = creePriseReception(PORT_RECEPTION);
-
-    printf("RECEPTION \n");
-    printf("Appuer sur ENTREE pour demarrer...\n");
-    printf("PC2 demarre ...\n\n");
-    while( getchar() != '\n' ); /* temporisation */
-    /*boucle en reception*/
-    do
-    {
-        memset (buffer, '\0', sizeof(buffer));
-        recoit(priseReception, buffer, sizeof(buffer)-1);
-        sscanf(buffer, "%15s%120s", p.adresse, p.message);
-        traitePaquet(&p);
-    } while (1); /* boucle infinie */
-
-  return 0;
+    return 0;
 }

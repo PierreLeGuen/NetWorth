@@ -15,13 +15,16 @@ char *initPC(int numPC) {
         serialInitPC[i] = 0;
     }
     int priseEmission, priseReception;
-    int PORT_EMISSION = 10000 + numPC;
-    int PORT_RECEPTION = 10000 + numPC + 1;
+    int PORT_EMISSION = 10000 + (1+numPC)*50;
+    int PORT_RECEPTION = 10000 + numPC*50;
 
     char charNumPCSender[1];
     char charNumPCReceiver[1];
     char charPriseEmission[1];
     char charPriseReception[1];
+    char charPortReception[5];
+    char charPortEmission[5];
+
 
     char *ADRESSE_EMETTEUR = malloc(13);
     char *ADRESSE_RECEPTEUR = malloc(13);
@@ -39,23 +42,29 @@ char *initPC(int numPC) {
         printf("Too much hosts, not supported yet");
         return NULL;
     }
-    priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
     priseReception = creePriseReception(PORT_RECEPTION);
+    priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
 
     sprintf(charPriseEmission, "%d", priseEmission);
     sprintf(charPriseReception, "%d", priseReception);
+    sprintf(charPortReception, "%d", PORT_RECEPTION);
+    sprintf(charPortEmission, "%d", PORT_EMISSION);
 
-    strncat(serialInitPC, &charNumPCSender[0], 1);
+
+    strncat(serialInitPC, charNumPCSender, 1);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, &charPriseEmission[0], 1);
+    strncat(serialInitPC, charPriseEmission, 1);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, &charPriseReception[0], 1);
+    strncat(serialInitPC, charPriseReception, 1);
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, ADRESSE_EMETTEUR, 13);
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, ADRESSE_RECEPTEUR, 13);
-    // strncat(serialInitPC)
-    printf("%c", charPriseReception[0]);
+    strncat(serialInitPC, ",", 1);
+    strncat(serialInitPC, charPortReception, 5);
+    strncat(serialInitPC, ",", 1);
+    strncat(serialInitPC, charPortEmission, 5);
+
 
     return serialInitPC;
 }
