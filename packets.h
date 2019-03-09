@@ -15,6 +15,6 @@ typedef struct paquet {
     char MESSAGE[LONGUEUR_MESSAGE];
 } Paquet;
 
-void traitePaquet(Paquet receivedPacket, Host AnHost);
+void traitePaquet(Host AnHost, char *buffer);
 
 #endif //NETWORTH_PACKETS_H

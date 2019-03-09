@@ -20,7 +20,7 @@ enum State {
 
 int main(int argc, char **argv) {
     char line[10];
-    Host PC2;
+    Host PC;
 
     char choix = 0;
     char *initHost;
@@ -31,13 +31,13 @@ int main(int argc, char **argv) {
 
     initHost = initPC(numero, true);
 
-    PC2.HOST_NUMBER = initHost[0] - 48;
-    PC2.PRISE_EMISSION = initHost[2] - 48;
-    PC2.PRISE_RECEPTION = initHost[4] - 48;
-    PC2.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
-    PC2.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
-    memcpy(PC2.ADRESSE, &initHost[5], 9);
-    printf("Vous êtes le pc n°: %d\n", PC2.HOST_NUMBER);
+    PC.HOST_NUMBER = initHost[0] - 48;
+    PC.PRISE_EMISSION = initHost[2] - 48;
+    PC.PRISE_RECEPTION = initHost[4] - 48;
+    PC.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
+    PC.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
+    memcpy(PC.ADRESSE, &initHost[5], 9);
+    printf("Vous êtes le pc n°: %d\n", PC.HOST_NUMBER);
     // numero += 1;
 
 
@@ -75,17 +75,14 @@ int main(int argc, char **argv) {
 
             memset(buffer, '\0', sizeof(buffer));
 
-            sprintf(buffer, "%d,%d,%s", PC2.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
-            envoie(PC2.PRISE_EMISSION, buffer, strlen(buffer));
+            sprintf(buffer, "%d,%d,%s", PC.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
+            envoie(PC.PRISE_EMISSION, buffer, strlen(buffer));
         } else if (currStatus == listen) {
             for (int i = 0; i < sizeof(buffer); ++i) {
                 buffer[i] = 0;
             }
-            Host senderHost;
-            memset(buffer, '\0', sizeof(buffer));
-            recoit(PC2.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
-            sscanf(buffer, "%d,%d,%64[^\\n]s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
-            traitePaquet(currPacket, PC2);
+            recoit(PC.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
+            traitePaquet(PC, buffer);
         } else {
             printf("ERROR : WRONG INPUT");
         }

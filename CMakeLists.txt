@@ -26,3 +26,14 @@ add_executable(networthPC2
         primitives.h
         README.md
         recoit.c initPC.c initPC.h packets.c packets.h)
+
+add_executable(networthPC3
+        creePriseEmission.c
+        creePriseReception.c
+        envoie.c
+        #exempleCOMPLET-PC1.c
+        PC3.c
+        Makefile
+        primitives.h
+        README.md
+        recoit.c initPC.c initPC.h packets.c packets.h)

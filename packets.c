@@ -4,29 +4,25 @@
 
 #include <stdio.h>
 #include "packets.h"
-#include "initPC.h"
-#include <stdlib.h>
 #include <string.h>
 #include "primitives.h"
 
 
-void traitePaquet(Paquet receivedPacket, Host AnHost) {
-    char buffer[LONGUEUR_MESSAGE];
+void traitePaquet(Host AnHost, char *buffer) {
+    Host srcHost = {0};
+    Host destHost = {0};
+    Paquet recvPacket = {0};
 
-    if (AnHost.HOST_NUMBER == receivedPacket.HOST_NUMBER)
-        /* si je suis le destinataire du paquet */
-    {
+    sscanf(buffer, "%d,%d,%64[^\\n]s", &srcHost.HOST_NUMBER, &destHost.HOST_NUMBER, recvPacket.MESSAGE);
+
+    if (AnHost.HOST_NUMBER == destHost.HOST_NUMBER) {
         printf("Je suis le destinataire. \n");
-        printf("MSG : %*s \n\n", 20, receivedPacket.MESSAGE);
+        printf("MSG : %*s \n\n", 20, recvPacket.MESSAGE);
 
     } else {
-        /* sinon */
         printf("Je ne suis PAS le destinataire. \n");
-        printf("DEST : %*d\n\n", 20, receivedPacket.HOST_NUMBER);
+        printf("DEST : %*d\n\n", 20, destHost.HOST_NUMBER);
         printf("Routage vers destinataire\n");
-        memset(buffer, '\0', sizeof(buffer));
-
-        sprintf(buffer, "%d%120s", receivedPacket.HOST_NUMBER, receivedPacket.MESSAGE);
         envoie(AnHost.PRISE_EMISSION, buffer, strlen(buffer));
     }
 }

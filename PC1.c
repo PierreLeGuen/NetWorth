@@ -23,7 +23,7 @@ enum State {
 
 int main(int argc, char **argv) {
     char line[10];
-    Host PC1;
+    Host PC;
 
     char choix = 0;
     char *initHost;
@@ -35,15 +35,15 @@ int main(int argc, char **argv) {
 
     initHost = initPC(numero, true);
 
-    PC1.HOST_NUMBER = initHost[0] - 48;
-    PC1.PRISE_EMISSION = initHost[2] - 48;
-    PC1.PRISE_RECEPTION = initHost[4] - 48;
-    PC1.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
-    PC1.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
-    memcpy(PC1.ADRESSE, &initHost[5], 9);
+    PC.HOST_NUMBER = initHost[0] - 48;
+    PC.PRISE_EMISSION = initHost[2] - 48;
+    PC.PRISE_RECEPTION = initHost[4] - 48;
+    PC.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
+    PC.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
+    memcpy(PC.ADRESSE, &initHost[5], 9);
     numero += 1;
 
-    printf("Vous êtes le pc n°: %d\n", PC1.HOST_NUMBER);
+    printf("Vous êtes le pc n°: %d\n", PC.HOST_NUMBER);
 
     while (!stop) {
         while (currStatus == standby) {
@@ -78,16 +78,11 @@ int main(int argc, char **argv) {
             while (getchar() != '\n');
             memset(buffer, '\0', sizeof(buffer));
 
-            sprintf(buffer, "%d,%d,%s", PC1.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
-            envoie(PC1.PRISE_EMISSION, buffer, strlen(buffer));
-            printf("Prise ENVOI %d", PC1.PRISE_EMISSION);
-
+            sprintf(buffer, "%d,%d,%s", PC.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
+            envoie(PC.PRISE_EMISSION, buffer, strlen(buffer));
         } else if (currStatus == listen) {
-            Host senderHost;
-            memset(buffer, '\0', sizeof(buffer));
-            recoit(PC1.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
-            sscanf(buffer, "%d,%d,%120s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
-            traitePaquet(currPacket, PC1);
+            recoit(PC.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
+            traitePaquet(PC, buffer);
         } else {
             printf("ERROR : WRONG INPUT");
         }
