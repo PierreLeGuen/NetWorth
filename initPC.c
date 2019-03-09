@@ -26,8 +26,8 @@ char *initPC(int numPC) {
     char charPortEmission[5];
 
 
-    char *ADRESSE_EMETTEUR = malloc(11);
-    char *ADRESSE_RECEPTEUR = malloc(11);
+    char *ADRESSE_EMETTEUR = malloc(11* sizeof(char));
+    char *ADRESSE_RECEPTEUR = malloc(11* sizeof(char));
     strcpy(ADRESSE_EMETTEUR, "192.168.0.0");
     strcpy(ADRESSE_RECEPTEUR, "192.168.0.0");
 
@@ -35,7 +35,7 @@ char *initPC(int numPC) {
     sprintf(charNumPCReceiver, "%d", numPC + 1);
 
 
-    if (numPC < 10) {
+    if (numPC < 9) {
         ADRESSE_EMETTEUR[10] = charNumPCSender[0];
         ADRESSE_RECEPTEUR[10] = charNumPCReceiver[0];
     } else {
@@ -57,9 +57,9 @@ char *initPC(int numPC) {
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, charPriseReception, 1);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_EMETTEUR, 13);
+    strncat(serialInitPC, ADRESSE_EMETTEUR, 11);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_RECEPTEUR, 13);
+    strncat(serialInitPC, ADRESSE_RECEPTEUR, 11);
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, charPortReception, 5);
     strncat(serialInitPC, ",", 1);
