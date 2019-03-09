@@ -1,4 +1,4 @@
-#include <assert.h>
+
 //#include <curses.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,9 +11,6 @@
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
 
 #define LONGUEUR_MESSAGE    128
-typedef enum {
-    false, true
-} bool;
 
 enum State {
     standby, listen, send
@@ -28,22 +25,20 @@ int main(int argc, char **argv) {
     char choix = 0;
     char *initHost;
     int numero = 1;
-    int destHostNumber = -1;
     char buffer[LONGUEUR_MESSAGE];
     Paquet currPacket;
     bool stop = false;
 
-    initHost = initPC(numero);
+    initHost = initPC(numero, true);
 
     PC2.HOST_NUMBER = initHost[0] - 48;
     PC2.PRISE_EMISSION = initHost[2] - 48;
     PC2.PRISE_RECEPTION = initHost[4] - 48;
-    char *pend = &initHost[34] + 5;
-    PC2.PORT_EMISSION = (int) strtol(&initHost[36], NULL, 10);
-    memcpy(PC2.ADRESSE, &initHost[6], 11);
-    numero += 1;
-
+    PC2.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
+    PC2.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
+    memcpy(PC2.ADRESSE, &initHost[5], 9);
     printf("Vous êtes le pc n°: %d\n", PC2.HOST_NUMBER);
+    // numero += 1;
 
 
     while (!stop) {
@@ -66,7 +61,7 @@ int main(int argc, char **argv) {
         }
 
         if (currStatus == send) {
-            char message[100] = {0};
+            int destHostNumber = -1;
             printf("Saisir message :\n");
             fgets(currPacket.MESSAGE, 100, stdin);
 
@@ -83,11 +78,13 @@ int main(int argc, char **argv) {
             sprintf(buffer, "%d,%d,%s", PC2.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
             envoie(PC2.PRISE_EMISSION, buffer, strlen(buffer));
         } else if (currStatus == listen) {
+            for (int i = 0; i < sizeof(buffer); ++i) {
+                buffer[i] = 0;
+            }
             Host senderHost;
             memset(buffer, '\0', sizeof(buffer));
-            printf("Prise RECEP %d", PC2.PRISE_RECEPTION);
             recoit(PC2.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
-            sscanf(buffer, "%d,%d,%120s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
+            sscanf(buffer, "%d,%d,%64[^\\n]s", &senderHost.HOST_NUMBER, &currPacket.HOST_NUMBER, currPacket.MESSAGE);
             traitePaquet(currPacket, PC2);
         } else {
             printf("ERROR : WRONG INPUT");

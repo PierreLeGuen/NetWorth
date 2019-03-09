@@ -9,7 +9,7 @@ add_executable(networthPC1
         creePriseEmission.c
         creePriseReception.c
         envoie.c
-        exempleCOMPLET-PC1.c
+        PC1.c
         #exempleCOMPLET-PC2.c
         Makefile
         primitives.h
@@ -21,7 +21,7 @@ add_executable(networthPC2
         creePriseReception.c
         envoie.c
         #exempleCOMPLET-PC1.c
-        exempleCOMPLET-PC2.c
+        PC2.c
         Makefile
         primitives.h
         README.md

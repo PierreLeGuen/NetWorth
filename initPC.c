@@ -9,14 +9,14 @@
 #include "string.h"
 #include <stdlib.h>
 
-char *initPC(int numPC) {
+char *initPC(int numPC, bool local) {
     char *serialInitPC = calloc(256, sizeof(char));
     for (int i = 0; i < 256; ++i) {
         serialInitPC[i] = 0;
     }
     int priseEmission, priseReception;
-    int PORT_EMISSION = 1990;//1900 + (1+numPC)*50;
-    int PORT_RECEPTION = 1920; //1900 + numPC*50;
+    int PORT_EMISSION = 19000 + (1 + numPC) * 50;
+    int PORT_RECEPTION = 19000 + numPC * 50;
 
     char charNumPCSender[1];
     char charNumPCReceiver[1];
@@ -24,24 +24,27 @@ char *initPC(int numPC) {
     char charPriseReception[1];
     char charPortReception[5];
     char charPortEmission[5];
+    char *ADRESSE_EMETTEUR = malloc(9 * sizeof(char));
+    char *ADRESSE_RECEPTEUR = malloc(9 * sizeof(char));
 
+    if (local) {
 
-    char *ADRESSE_EMETTEUR = malloc(11* sizeof(char));
-    char *ADRESSE_RECEPTEUR = malloc(11* sizeof(char));
-    strcpy(ADRESSE_EMETTEUR, "192.168.0.0");
-    strcpy(ADRESSE_RECEPTEUR, "192.168.0.0");
-
-    sprintf(charNumPCSender, "%d", numPC);
-    sprintf(charNumPCReceiver, "%d", numPC + 1);
-
-
-    if (numPC < 9) {
-        ADRESSE_EMETTEUR[10] = charNumPCSender[0];
-        ADRESSE_RECEPTEUR[10] = charNumPCReceiver[0];
+        strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
+        strcpy(ADRESSE_RECEPTEUR, "127.0.0.1");
+        sprintf(charNumPCSender, "%d", numPC);
+        sprintf(charNumPCReceiver, "%d", numPC + 1);
     } else {
-        printf("Too much hosts, not supported yet");
-        return NULL;
+        sprintf(charNumPCSender, "%d", numPC);
+        sprintf(charNumPCReceiver, "%d", numPC + 1);
+        if (numPC < 9) {
+            ADRESSE_EMETTEUR[10] = charNumPCSender[0];
+            ADRESSE_RECEPTEUR[10] = charNumPCReceiver[0];
+        } else {
+            printf("Too much hosts, not supported yet");
+            return NULL;
+        }
     }
+
     priseReception = creePriseReception(PORT_RECEPTION);
     priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
 
@@ -57,9 +60,9 @@ char *initPC(int numPC) {
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, charPriseReception, 1);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_EMETTEUR, 11);
+    strncat(serialInitPC, ADRESSE_EMETTEUR, 9);
     strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_RECEPTEUR, 11);
+    strncat(serialInitPC, ADRESSE_RECEPTEUR, 9);
     strncat(serialInitPC, ",", 1);
     strncat(serialInitPC, charPortReception, 5);
     strncat(serialInitPC, ",", 1);
