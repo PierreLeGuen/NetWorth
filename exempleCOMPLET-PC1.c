@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
     PC1.PRISE_EMISSION = initHost[2] - 48;
     PC1.PRISE_RECEPTION = initHost[4] - 48;
     PC1.PORT_EMISSION = (int) strtol(&initHost[36], NULL, 10);
-    memcpy(PC1.ADRESSE, &initHost[6], 13);
+    memcpy(PC1.ADRESSE, &initHost[6], 11);
     numero += 1;
 
     printf("Vous êtes le pc n°: %d\n", PC1.HOST_NUMBER);

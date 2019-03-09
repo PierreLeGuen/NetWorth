@@ -15,8 +15,8 @@ char *initPC(int numPC) {
         serialInitPC[i] = 0;
     }
     int priseEmission, priseReception;
-    int PORT_EMISSION = 10000 + (1+numPC)*50;
-    int PORT_RECEPTION = 10000 + numPC*50;
+    int PORT_EMISSION = 1990;//1900 + (1+numPC)*50;
+    int PORT_RECEPTION = 1920; //1900 + numPC*50;
 
     char charNumPCSender[1];
     char charNumPCReceiver[1];
@@ -26,8 +26,8 @@ char *initPC(int numPC) {
     char charPortEmission[5];
 
 
-    char *ADRESSE_EMETTEUR = malloc(13);
-    char *ADRESSE_RECEPTEUR = malloc(13);
+    char *ADRESSE_EMETTEUR = malloc(11);
+    char *ADRESSE_RECEPTEUR = malloc(11);
     strcpy(ADRESSE_EMETTEUR, "192.168.0.0");
     strcpy(ADRESSE_RECEPTEUR, "192.168.0.0");
 

@@ -39,8 +39,8 @@ int main(int argc, char **argv) {
     PC2.PRISE_EMISSION = initHost[2] - 48;
     PC2.PRISE_RECEPTION = initHost[4] - 48;
     char *pend = &initHost[34] + 5;
-    PC2.PORT_EMISSION = (int) strtol(&initHost[40], &pend, 10);
-    memcpy(PC2.ADRESSE, &initHost[6], 13);
+    PC2.PORT_EMISSION = (int) strtol(&initHost[36], NULL, 10);
+    memcpy(PC2.ADRESSE, &initHost[6], 11);
     numero += 1;
 
     printf("Vous êtes le pc n°: %d\n", PC2.HOST_NUMBER);
