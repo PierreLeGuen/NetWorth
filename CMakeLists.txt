@@ -14,7 +14,7 @@ add_executable(networthPC1
         Makefile
         primitives.h
         README.md
-        recoit.c initPC.c initPC.h packets.c packets.h)
+        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)
 
 add_executable(networthPC2
         creePriseEmission.c
@@ -25,7 +25,7 @@ add_executable(networthPC2
         Makefile
         primitives.h
         README.md
-        recoit.c initPC.c initPC.h packets.c packets.h)
+        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)
 
 add_executable(networthPC3
         creePriseEmission.c
@@ -36,4 +36,4 @@ add_executable(networthPC3
         Makefile
         primitives.h
         README.md
-        recoit.c initPC.c initPC.h packets.c packets.h)
+        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)

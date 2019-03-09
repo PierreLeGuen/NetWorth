@@ -4,7 +4,7 @@
 
 #include <sys/socket.h>
 #include <stdio.h>
-#include "initPC.h"
+#include "initHOST.h"
 #include "primitives.h"
 #include "string.h"
 #include <stdlib.h>
@@ -15,6 +15,9 @@ char *initPC(int numPC, bool local) {
         serialInitPC[i] = 0;
     }
     int priseEmission, priseReception;
+    for (int j = 19000; j < 20000; j = j + 50) {
+
+    }
     int PORT_EMISSION = 19000 + (1 + numPC) * 50;
     int PORT_RECEPTION = 19000 + numPC * 50;
 

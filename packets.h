@@ -5,7 +5,7 @@
 #ifndef NETWORTH_PACKETS_H
 #define NETWORTH_PACKETS_H
 
-#include "initPC.h"
+#include "initHOST.h"
 
 #define LONGUEUR_MESSAGE    128
 

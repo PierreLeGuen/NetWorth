@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "initPC.h"
+#include "initHOST.h"
 #include "packets.h"
-
+#include "sendPacket.h"
 #include "primitives.h"
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
@@ -26,7 +26,6 @@ int main(int argc, char **argv) {
 	char *initHost;
 	int numero = 2;
 	char buffer[LONGUEUR_MESSAGE];
-	Paquet currPacket;
 	bool stop = false;
 
 	initHost = initPC(numero, true);
@@ -61,26 +60,8 @@ int main(int argc, char **argv) {
 		}
 
 		if (currStatus == send) {
-			int destHostNumber = -1;
-			printf("Saisir message :\n");
-			fgets(currPacket.MESSAGE, 100, stdin);
-
-			printf("Destinataire ?");
-			if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
-				destHostNumber = 0;
-
-			currPacket.HOST_NUMBER = destHostNumber;
-			printf("Presser ENTREE pour envoyer le message\n");
-			while (getchar() != '\n');
-
-			memset(buffer, '\0', sizeof(buffer));
-
-			sprintf(buffer, "%d,%d,%s", PC.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
-			envoie(PC.PRISE_EMISSION, buffer, strlen(buffer));
+			sendNewPacket(PC);
 		} else if (currStatus == listen) {
-			for (int i = 0; i < sizeof(buffer); ++i) {
-				buffer[i] = 0;
-			}
 			recoit(PC.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
 			traitePaquet(PC, buffer);
 		} else {

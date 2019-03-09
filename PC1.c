@@ -1,16 +1,17 @@
 
+#define LONGUEUR_MESSAGE    128
+
 //#include <curses.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "initPC.h"
+#include "initHOST.h"
 #include "packets.h"
-
+#include "sendPacket.h"
 #include "primitives.h"
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
 
-#define LONGUEUR_MESSAGE    128
 
 
 enum State {
@@ -65,21 +66,7 @@ int main(int argc, char **argv) {
         }
 
         if (currStatus == send) {
-            int destHostNumber = -1;
-            printf("Saisir message :\n");
-            fgets(currPacket.MESSAGE, 100, stdin);
-
-            printf("Destinataire (numPC) : \n");
-            if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
-                destHostNumber = 0;
-
-            currPacket.HOST_NUMBER = destHostNumber;
-            printf("Presser ENTREE pour envoyer le message\n");
-            while (getchar() != '\n');
-            memset(buffer, '\0', sizeof(buffer));
-
-            sprintf(buffer, "%d,%d,%s", PC.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.MESSAGE);
-            envoie(PC.PRISE_EMISSION, buffer, strlen(buffer));
+            sendNewPacket(PC);
         } else if (currStatus == listen) {
             recoit(PC.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
             traitePaquet(PC, buffer);
