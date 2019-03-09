@@ -5,34 +5,12 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(networthPC1
+add_executable(networth.exec
         creePriseEmission.c
         creePriseReception.c
         envoie.c
-        PC1.c
+        main.c
         #exempleCOMPLET-PC2.c
-        Makefile
-        primitives.h
-        README.md
-        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)
-
-add_executable(networthPC2
-        creePriseEmission.c
-        creePriseReception.c
-        envoie.c
-        #exempleCOMPLET-PC1.c
-        PC2.c
-        Makefile
-        primitives.h
-        README.md
-        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)
-
-add_executable(networthPC3
-        creePriseEmission.c
-        creePriseReception.c
-        envoie.c
-        #exempleCOMPLET-PC1.c
-        PC3.c
         Makefile
         primitives.h
         README.md

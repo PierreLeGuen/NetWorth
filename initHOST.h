@@ -18,12 +18,6 @@ typedef  struct host{
     int PRISE_RECEPTION;
 } Host;
 
-/**
- * @brief A function to add a PC in the network
- *
- * @param numPC
- * @return 1 : PC NUMBER, 2-
- */
-char *initPC(int numPC, bool local);
+char *addHost();
 
 #endif //NETWORTH_INITPC_H

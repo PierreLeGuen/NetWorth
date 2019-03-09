@@ -1,4 +1,6 @@
 
+#define LONGUEUR_MESSAGE    128
+
 //#include <curses.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +12,7 @@
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */
 
-#define LONGUEUR_MESSAGE    128
+
 
 enum State {
     standby, listen, send
@@ -18,18 +20,23 @@ enum State {
 
 /* Paquet <=> struct paquet */
 
+
+
 int main(int argc, char **argv) {
     char line[10];
     Host PC;
 
     char choix = 0;
     char *initHost;
-    int numero = 1;
+    int numero = 0;
+
+
+    int destHostNumber = -1;
     char buffer[LONGUEUR_MESSAGE];
     Paquet currPacket;
     bool stop = false;
 
-    initHost = initPC(numero, true);
+    initHost = addHost();
 
     PC.HOST_NUMBER = initHost[0] - 48;
     PC.PRISE_EMISSION = initHost[2] - 48;
@@ -37,9 +44,9 @@ int main(int argc, char **argv) {
     PC.PORT_EMISSION = (int) strtol(&initHost[32], NULL, 10);
     PC.PORT_RECEPTION = (int) strtol(&initHost[26], NULL, 10);
     memcpy(PC.ADRESSE, &initHost[5], 9);
-    printf("Vous êtes le pc n°: %d\n", PC.HOST_NUMBER);
-    // numero += 1;
+    numero += 1;
 
+    printf("Vous êtes le pc n°: %d\n", PC.HOST_NUMBER);
 
     while (!stop) {
         while (currStatus == standby) {
