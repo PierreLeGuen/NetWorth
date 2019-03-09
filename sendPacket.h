@@ -12,6 +12,6 @@
  *
  * @param srcHost A filled Host struct
  */
-void sendNewPacket(Host srcHost);
+void sendNewPacket(Host srcHost, char *buffer);
 
 #endif //NETWORTH_SENDPACKET_H

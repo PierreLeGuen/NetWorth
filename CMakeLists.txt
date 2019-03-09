@@ -14,4 +14,14 @@ add_executable(networth.exec
         Makefile
         primitives.h
         README.md
-        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h)
+        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h packetChecker.c packetChecker.h)
+add_executable(networth.exec.debug
+        creePriseEmission.c
+        creePriseReception.c
+        envoie.c
+        main.c
+        #exempleCOMPLET-PC2.c
+        Makefile
+        primitives.h
+        README.md
+        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h packetChecker.c packetChecker.h)

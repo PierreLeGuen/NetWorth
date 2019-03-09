@@ -1,5 +1,5 @@
 
-#define LONGUEUR_MESSAGE    128
+#define LONGUEUR_MESSAGE    2056
 
 //#include <curses.h>
 #include <stdio.h>
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 
 
     int destHostNumber = -1;
-    char buffer[LONGUEUR_MESSAGE];
+    char buffer[LONGUEUR_MESSAGE] = {0};
     Paquet currPacket;
     bool stop = false;
 
@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
         }
 
         if (currStatus == send) {
-            sendNewPacket(PC);
+            sendNewPacket(PC, buffer);
         } else if (currStatus == listen) {
             recoit(PC.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
             traitePaquet(PC, buffer);

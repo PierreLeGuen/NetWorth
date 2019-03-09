@@ -7,11 +7,13 @@
 
 #include "initHOST.h"
 
-#define LONGUEUR_MESSAGE    128
+#define LONGUEUR_MESSAGE    2056
 
 typedef struct paquet {
     int HOST_NUMBER;
     char *ADDRESSE;
+    int AccuseReception;
+    unsigned short CRC;
     char MESSAGE[LONGUEUR_MESSAGE];
 } Paquet;
 
