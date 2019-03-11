@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 char *initPC(int numPC, bool local, bool isLastHost) {
+    char distIP[20] = {0};
     char *serialInitPC = calloc(256, sizeof(char));
     for (int i = 0; i < 256; ++i) {
         serialInitPC[i] = 0;
@@ -32,22 +33,25 @@ char *initPC(int numPC, bool local, bool isLastHost) {
         sprintf(charNumPCSender, "%d", numPC);
         sprintf(charNumPCReceiver, "%d", numPC + 1);
     } else {
+
+        printf("Entrer IP prochain noeud \n");
+        fgets(distIP, 20, stdin);
+        strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
+        strcpy(ADRESSE_RECEPTEUR, distIP);
         sprintf(charNumPCSender, "%d", numPC);
         sprintf(charNumPCReceiver, "%d", numPC + 1);
-        if (numPC < 9) {
-            ADRESSE_EMETTEUR[10] = charNumPCSender[0];
-            ADRESSE_RECEPTEUR[10] = charNumPCReceiver[0];
-        } else {
-            printf("Too much hosts, not supported yet");
-            return NULL;
-        }
     }
     if (isLastHost) {
         PORT_EMISSION = 19000;
         sprintf(charNumPCReceiver, "%d", 0);
     }
+    if(distIP){
+        priseEmission = creePriseEmission(distIP, PORT_EMISSION);
+    }
+    else{
+        priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
+    }
     priseReception = creePriseReception(PORT_RECEPTION);
-    priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
 
     sprintf(charPriseEmission, "%d", priseEmission);
     sprintf(charPriseReception, "%d", priseReception);
@@ -78,6 +82,7 @@ char *addHost() {
     bool isLastHost = false;
     bool isLocalHost = true;
     int hostNumber = -1;
+    char distIP[20] = {0};
 
     printf("Hote en loopback ? (true/false) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLocalHost) != 1)
@@ -85,9 +90,10 @@ char *addHost() {
     printf("Choix du numéro d'hote (de 0 à 9, numérotation continue) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &hostNumber) != 1)
         hostNumber = 0;
-    printf("C'était le dernier hote ? (true/false) \n");
-    if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLastHost) != 1)
-        isLastHost = 0;
-
+    if(hostNumber!=0){
+        printf("C'était le dernier hote ? (true/false) \n");
+        if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLastHost) != 1)
+            isLastHost = 0;
+    }
     return initPC(hostNumber, isLocalHost, isLastHost);
 }

@@ -41,7 +41,6 @@ int main(int argc, char **argv) {
     memcpy(PC.ADRESSE, &initHost[5], 9);
 
     printf("Vous êtes le pc n°: %d\n", PC.HOST_NUMBER);
-    Paquet currPacket;
     if (PC.PORT_EMISSION == 19000) {
         char initBuffer[LONGUEUR_MESSAGE] = {0};
         printf("!! INIT NETWORK TOKEN !!");
@@ -49,7 +48,6 @@ int main(int argc, char **argv) {
                 0, "(TOKEN) INIT NETWORK");
         envoie(PC.PRISE_EMISSION, initBuffer, strlen(initBuffer));
     }
-
 
     while (!stop) {
         printf("EN ATTENTE TOKEN\n");
@@ -69,10 +67,10 @@ int main(int argc, char **argv) {
                 sendNewPacket(PC, buffer);
             } else {
                 memset(buffer, '\0', sizeof(buffer));
-                if (PC.PORT_EMISSION == 19000){
+                if (PC.PORT_EMISSION == 19000) {
                     sprintf(buffer, "%d,%d,%d,%d,%s", PC.HOST_NUMBER, 0, 0,
                             0, "(TOKEN)");
-                }else{
+                } else {
                     sprintf(buffer, "%d,%d,%d,%d,%s", PC.HOST_NUMBER, PC.HOST_NUMBER + 1, 0,
                             0, "(TOKEN)");
                 }

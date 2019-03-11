@@ -17,6 +17,12 @@ typedef struct paquet {
     char MESSAGE[LONGUEUR_MESSAGE];
 } Paquet;
 
+/**
+ * @brief Traite le paquet (désencapsulation)
+ *
+ * @param AnHost An Host struct
+ * @param buffer A Buffer containing the message.
+ */
 void traitePaquet(Host AnHost, char *buffer);
 
 #endif //NETWORTH_PACKETS_H
