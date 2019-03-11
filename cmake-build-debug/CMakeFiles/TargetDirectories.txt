@@ -1,0 +1,4 @@
+/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir
+/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.debug.dir

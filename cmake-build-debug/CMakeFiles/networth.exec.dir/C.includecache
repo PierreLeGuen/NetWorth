@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pierre/Documents/git/networth/initHOST.c
+sys/socket.h
+-
+stdio.h
+-
+initHOST.h
+/home/pierre/Documents/git/networth/initHOST.h
+primitives.h
+/home/pierre/Documents/git/networth/primitives.h
+string.h
+/home/pierre/Documents/git/networth/string.h
+stdlib.h
+-
+
+/home/pierre/Documents/git/networth/initHOST.h
+
+/home/pierre/Documents/git/networth/primitives.h
+sys/types.h
+-
+
