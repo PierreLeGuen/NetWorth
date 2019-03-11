@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9edf142a-c97a-4e4b-b896-7d36190dea3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/initHOST.c" beforeDir="false" afterPath="$PROJECT_DIR$/initHOST.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packets.c" beforeDir="false" afterPath="$PROJECT_DIR$/packets.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packets.h" beforeDir="false" afterPath="$PROJECT_DIR$/packets.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,14 +85,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/initHOST.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+            <state relative-caret-position="45">
+              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
               <folding>
                 <element signature="e#41#64#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -143,11 +149,12 @@
         <option value="$PROJECT_DIR$/packets.h" />
         <option value="$PROJECT_DIR$/packets.c" />
         <option value="$PROJECT_DIR$/initHOST.c" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
@@ -162,6 +169,11 @@
             <path>
               <item name="networth" type="b2602c69:ProjectViewProjectNode" />
               <item name="networth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="networth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="networth" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,7 +243,7 @@
       <workItem from="1552248113985" duration="626000" />
       <workItem from="1552294528782" duration="157000" />
       <workItem from="1552294770474" duration="4494000" />
-      <workItem from="1552317403163" duration="2548000" />
+      <workItem from="1552317403163" duration="2841000" />
     </task>
     <task id="LOCAL-00001" summary="serial_initPC">
       <created>1552070465695</created>
@@ -300,25 +312,25 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55734000" />
+    <option name="totallyTimeSpent" value="56027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25187165" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25187165" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32870865" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.51016045" side_tool="true" weight="0.5049073" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info active="true" anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" visible="true" weight="0.32715377" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" weight="0.32715377" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32977587" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49625668" weight="0.27589968" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" weight="0.5049073" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" visible="true" weight="0.5049073" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -358,6 +370,11 @@
           <url>file://$PROJECT_DIR$/main.c</url>
           <line>52</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/initHOST.c</url>
+          <line>41</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -532,11 +549,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/initHOST.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        <state relative-caret-position="45">
+          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="e#41#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
