@@ -12,7 +12,6 @@
 void sendNewPacket(Host srcHost, char *buffer) {
     Paquet currPacket = {0};
 
-
     char line[10];
     int destHostNumber = -1;
     bool isModeConnecte = false;
@@ -36,7 +35,8 @@ void sendNewPacket(Host srcHost, char *buffer) {
         const unsigned char *ptr2msg;
         ptr2msg = currPacket.MESSAGE;
 
-        currPacket.CRC = crc16(ptr2msg, strlen(currPacket.MESSAGE) - 1);
+        currPacket.CRC = crc16(ptr2msg, strlen(currPacket.MESSAGE));
+        //TODO ERREUR AU niveau du CRC
         currPacket.AccuseReception = -1;
         sprintf(buffer, "%d,%d,%d,%d,%s", srcHost.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.AccuseReception,
                 currPacket.CRC, currPacket.MESSAGE);

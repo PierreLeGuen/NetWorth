@@ -26,7 +26,7 @@ void traitePaquet(Host AnHost, char *buffer) {
             int recvCrc = 0;
             int AR[LONGUEUR_MESSAGE] = {0};
 
-            recvCrc = crc16(&recvPacket.MESSAGE, strlen(recvPacket.MESSAGE));
+            recvCrc = crc16(&recvPacket.MESSAGE, strlen(recvPacket.MESSAGE)-1);
             if (recvCrc == recvPacket.CRC) {
                 printf("Mode CONNECTE détecté. CRC : CORRECT\n");
                 printf("MSG : %*s \n\n", 20, recvPacket.MESSAGE);
@@ -34,7 +34,6 @@ void traitePaquet(Host AnHost, char *buffer) {
                 sprintf(buffer, "%d,%d,%d,%d,%s", destHost.HOST_NUMBER, srcHost.HOST_NUMBER, recvPacket.AccuseReception,
                         recvPacket.CRC, recvPacket.MESSAGE);
                 envoie(AnHost.PRISE_EMISSION, buffer, strlen(buffer));
-
             } else {
                 printf("Mode CONNECTE détecté. CRC : FAUX\n");
                 printf("CRC attendu : %d, CRC reçu : %d\n", recvPacket.CRC, recvCrc);
@@ -50,8 +49,6 @@ void traitePaquet(Host AnHost, char *buffer) {
             printf("Mode NON CONNECTE détecté\n");
             printf("MSG : %*s \n\n", 20, recvPacket.MESSAGE);
         }
-
-
     } else {
         printf("Je ne suis PAS le destinataire. \n");
         printf("DEST : %*d\n\n", 20, destHost.HOST_NUMBER);
