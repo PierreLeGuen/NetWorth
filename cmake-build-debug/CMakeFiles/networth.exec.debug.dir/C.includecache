@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+.././primitives.h
+sys/types.h
+-
+
+/home/pierre/Documents/git/networth/hosts/initHOST.c
+sys/socket.h
+-
+stdio.h
+-
+initHOST.h
+/home/pierre/Documents/git/networth/hosts/initHOST.h
+primitives.h
+/home/pierre/Documents/git/networth/hosts/primitives.h
+string.h
+/home/pierre/Documents/git/networth/hosts/string.h
+stdlib.h
+-
+
 /home/pierre/Documents/git/networth/hosts/initHOST.h
 
 /home/pierre/Documents/git/networth/main.c

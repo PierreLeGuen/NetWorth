@@ -15,9 +15,8 @@
     <list default="true" id="9edf142a-c97a-4e4b-b896-7d36190dea3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/networth.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hosts/initHOST.c" beforeDir="false" afterPath="$PROJECT_DIR$/hosts/initHOST.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec.debug" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="231">
+              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
               <folding>
                 <element signature="e#41#64#0" expanded="true" />
               </folding>
@@ -176,12 +175,7 @@
             <path>
               <item name="networth" type="b2602c69:ProjectViewProjectNode" />
               <item name="networth" type="462c0819:PsiDirectoryNode" />
-              <item name="hosts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="networth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="networth" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -262,7 +256,7 @@
       <workItem from="1552317403163" duration="2945000" />
       <workItem from="1552322390798" duration="1436000" />
       <workItem from="1552375954444" duration="3006000" />
-      <workItem from="1552379764888" duration="1035000" />
+      <workItem from="1552379764888" duration="1277000" />
     </task>
     <task id="LOCAL-00001" summary="serial_initPC">
       <created>1552070465695</created>
@@ -341,29 +335,35 @@
       <option name="project" value="LOCAL" />
       <updated>1552377091495</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix priseEmission">
+      <created>1552380912682</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1552380912682</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61608000" />
+    <option name="totallyTimeSpent" value="61850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26149732" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26149732" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32870865" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.51016045" side_tool="true" weight="0.5049073" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" weight="0.32715377" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" visible="true" weight="0.32715377" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32977587" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49625668" weight="0.27589968" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" visible="true" weight="0.5049073" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" weight="0.5049073" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -387,7 +387,8 @@
     <MESSAGE value="sendNewPacket" />
     <MESSAGE value="add hosts&#10;-single file" />
     <MESSAGE value="Rearrange folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearrange folders" />
+    <MESSAGE value="Fix priseEmission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix priseEmission" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -609,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state relative-caret-position="231">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
           <folding>
             <element signature="e#41#64#0" expanded="true" />
           </folding>
