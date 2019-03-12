@@ -10,6 +10,7 @@
 #define LONGUEUR_MESSAGE    2056
 
 typedef struct paquet {
+    bool containsMsg;
     int HOST_NUMBER;
     char *ADDRESSE;
     int AccuseReception;
@@ -23,6 +24,6 @@ typedef struct paquet {
  * @param AnHost An Host struct
  * @param buffer A Buffer containing the message.
  */
-void traitePaquet(Host AnHost, char *buffer);
+Paquet traitePaquet(Host AnHost, char *buffer);
 
 #endif //NETWORTH_PACKETS_H

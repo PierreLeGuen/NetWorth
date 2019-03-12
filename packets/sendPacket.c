@@ -27,10 +27,9 @@ void sendNewPacket(Host srcHost, char *buffer) {
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isModeConnecte) != 1)
         isModeConnecte = 0;
 
-
     memset(buffer, '\0', sizeof(buffer));
     currPacket.HOST_NUMBER = destHostNumber;
-
+    currPacket.containsMsg = true;
     if (isModeConnecte) {
         const unsigned char *ptr2msg;
         ptr2msg = currPacket.MESSAGE;
@@ -38,10 +37,10 @@ void sendNewPacket(Host srcHost, char *buffer) {
         currPacket.CRC = crc16(ptr2msg, strlen(currPacket.MESSAGE));
         //TODO ERREUR AU niveau du CRC
         currPacket.AccuseReception = -1;
-        sprintf(buffer, "%d,%d,%d,%d,%s", srcHost.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.AccuseReception,
+        sprintf(buffer, "%d,%d,%d,%d,%d,%s", currPacket.containsMsg,srcHost.HOST_NUMBER, currPacket.HOST_NUMBER, currPacket.AccuseReception,
                 currPacket.CRC, currPacket.MESSAGE);
     } else {
-        sprintf(buffer, "%d,%d,%d,%d,%s", srcHost.HOST_NUMBER, currPacket.HOST_NUMBER, 0, 0, currPacket.MESSAGE);
+        sprintf(buffer, "%d,%d,%d,%d,%d,%s", currPacket.containsMsg,srcHost.HOST_NUMBER, currPacket.HOST_NUMBER, 0, 0, currPacket.MESSAGE);
     }
 
     printf("Presser ENTREE pour envoyer le message\n");

@@ -29,6 +29,7 @@ int main(int argc, char **argv) {
     char buffer[LONGUEUR_MESSAGE] = {0};
     bool stop = false;
     bool asToken = false;
+    Paquet recvPacket = {0};
 
     AnHost = addHost();
     /*
@@ -44,8 +45,8 @@ int main(int argc, char **argv) {
     if (AnHost.PORT_EMISSION == 19000) {
         char initBuffer[LONGUEUR_MESSAGE] = {0};
         printf("!! INIT NETWORK TOKEN !!");
-        sprintf(initBuffer, "%d,%d,%d,%d,%s", AnHost.HOST_NUMBER, 0, 0,
-                0, "(TOKEN) INIT NETWORK");
+        sprintf(initBuffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, 0, 0,
+                0, "\n");
         envoie(AnHost.PRISE_EMISSION, initBuffer, strlen(initBuffer));
     }
 
@@ -53,12 +54,10 @@ int main(int argc, char **argv) {
         printf("EN ATTENTE TOKEN\n");
         if (!asToken) {
             recoit(AnHost.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
-            traitePaquet(AnHost, buffer);
-            if (AnHost.HOST_NUMBER == (int) buffer[2] - 48) {
-                asToken = true;
-            }
+            recvPacket = traitePaquet(AnHost, buffer);
+            asToken = true;
         }
-        if (asToken) {
+        if (asToken) {gi
             bool wantToSendMessage = false;
             printf("Voulez-vous envoyer un message ?");
             if (fgets(line, 10, stdin) && sscanf(line, "%d", &wantToSendMessage) != 1)
@@ -68,11 +67,11 @@ int main(int argc, char **argv) {
             } else {
                 memset(buffer, '\0', sizeof(buffer));
                 if (AnHost.PORT_EMISSION == 19000) {
-                    sprintf(buffer, "%d,%d,%d,%d,%s", AnHost.HOST_NUMBER, 0, 0,
-                            0, "(TOKEN)");
+                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, 0, 0,
+                            0, "\n");
                 } else {
-                    sprintf(buffer, "%d,%d,%d,%d,%s", AnHost.HOST_NUMBER, AnHost.HOST_NUMBER + 1, 0,
-                            0, "(TOKEN)");
+                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, AnHost.HOST_NUMBER + 1, 0,
+                            0, "\n");
                 }
                 envoie(AnHost.PRISE_EMISSION, buffer, strlen(buffer));
             }
