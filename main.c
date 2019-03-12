@@ -4,9 +4,9 @@
 //#include <curses.h>
 #include <stdio.h>
 #include <string.h>
-#include "hosts/initHOST.h"
-#include "packets/TraitePaquet.h"
-#include "packets/sendPacket.h"
+#include "initHOST.h"
+#include "TraitePaquet.h"
+#include "sendPacket.h"
 #include "primitives.h"
 
 /* emetteur (ma machine) ---> recepteur (machine suivante) */

@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pierre/Documents/git/networth/hosts/creePriseEmission.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o"
-  "/home/pierre/Documents/git/networth/hosts/creePriseReception.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o"
-  "/home/pierre/Documents/git/networth/hosts/initHOST.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/hosts/initHOST.c.o"
+  "/home/pierre/Documents/git/networth/TraitePaquet.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/TraitePaquet.c.o"
+  "/home/pierre/Documents/git/networth/creePriseEmission.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/creePriseEmission.c.o"
+  "/home/pierre/Documents/git/networth/creePriseReception.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/creePriseReception.c.o"
+  "/home/pierre/Documents/git/networth/envoie.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/envoie.c.o"
+  "/home/pierre/Documents/git/networth/initHOST.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/initHOST.c.o"
   "/home/pierre/Documents/git/networth/main.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/main.c.o"
-  "/home/pierre/Documents/git/networth/packets/TraitePaquet.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o"
-  "/home/pierre/Documents/git/networth/packets/envoie.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packets/envoie.c.o"
-  "/home/pierre/Documents/git/networth/packets/packetChecker.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packets/packetChecker.c.o"
-  "/home/pierre/Documents/git/networth/packets/recoit.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packets/recoit.c.o"
-  "/home/pierre/Documents/git/networth/packets/sendPacket.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packets/sendPacket.c.o"
+  "/home/pierre/Documents/git/networth/packetChecker.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/packetChecker.c.o"
+  "/home/pierre/Documents/git/networth/recoit.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/recoit.c.o"
+  "/home/pierre/Documents/git/networth/sendPacket.c" "/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles/networth.exec.dir/sendPacket.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

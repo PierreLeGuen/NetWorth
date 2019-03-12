@@ -238,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.networth.exec.debug">
+  <component name="RunManager" selected="Application.networth.exec">
     <configuration name="networth.exec" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="networth" TARGET_NAME="networth.exec" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="networth" RUN_TARGET_NAME="networth.exec">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />

@@ -57,44 +57,44 @@ include CMakeFiles/networth.exec.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/networth.exec.dir/flags.make
 
-CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o: ../hosts/creePriseEmission.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o   -c /home/pierre/Documents/git/networth/hosts/creePriseEmission.c
+CMakeFiles/networth.exec.dir/creePriseEmission.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/creePriseEmission.c.o: ../creePriseEmission.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/networth.exec.dir/creePriseEmission.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/creePriseEmission.c.o   -c /home/pierre/Documents/git/networth/creePriseEmission.c
 
-CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/hosts/creePriseEmission.c > CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.i
+CMakeFiles/networth.exec.dir/creePriseEmission.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/creePriseEmission.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/creePriseEmission.c > CMakeFiles/networth.exec.dir/creePriseEmission.c.i
 
-CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/hosts/creePriseEmission.c -o CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.s
+CMakeFiles/networth.exec.dir/creePriseEmission.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/creePriseEmission.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/creePriseEmission.c -o CMakeFiles/networth.exec.dir/creePriseEmission.c.s
 
-CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o: ../hosts/creePriseReception.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o   -c /home/pierre/Documents/git/networth/hosts/creePriseReception.c
+CMakeFiles/networth.exec.dir/creePriseReception.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/creePriseReception.c.o: ../creePriseReception.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/networth.exec.dir/creePriseReception.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/creePriseReception.c.o   -c /home/pierre/Documents/git/networth/creePriseReception.c
 
-CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/hosts/creePriseReception.c > CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.i
+CMakeFiles/networth.exec.dir/creePriseReception.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/creePriseReception.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/creePriseReception.c > CMakeFiles/networth.exec.dir/creePriseReception.c.i
 
-CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/hosts/creePriseReception.c -o CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.s
+CMakeFiles/networth.exec.dir/creePriseReception.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/creePriseReception.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/creePriseReception.c -o CMakeFiles/networth.exec.dir/creePriseReception.c.s
 
-CMakeFiles/networth.exec.dir/packets/envoie.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/packets/envoie.c.o: ../packets/envoie.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/networth.exec.dir/packets/envoie.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packets/envoie.c.o   -c /home/pierre/Documents/git/networth/packets/envoie.c
+CMakeFiles/networth.exec.dir/envoie.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/envoie.c.o: ../envoie.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/networth.exec.dir/envoie.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/envoie.c.o   -c /home/pierre/Documents/git/networth/envoie.c
 
-CMakeFiles/networth.exec.dir/packets/envoie.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packets/envoie.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packets/envoie.c > CMakeFiles/networth.exec.dir/packets/envoie.c.i
+CMakeFiles/networth.exec.dir/envoie.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/envoie.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/envoie.c > CMakeFiles/networth.exec.dir/envoie.c.i
 
-CMakeFiles/networth.exec.dir/packets/envoie.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packets/envoie.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packets/envoie.c -o CMakeFiles/networth.exec.dir/packets/envoie.c.s
+CMakeFiles/networth.exec.dir/envoie.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/envoie.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/envoie.c -o CMakeFiles/networth.exec.dir/envoie.c.s
 
 CMakeFiles/networth.exec.dir/main.c.o: CMakeFiles/networth.exec.dir/flags.make
 CMakeFiles/networth.exec.dir/main.c.o: ../main.c
@@ -109,95 +109,95 @@ CMakeFiles/networth.exec.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/main.c -o CMakeFiles/networth.exec.dir/main.c.s
 
-CMakeFiles/networth.exec.dir/packets/recoit.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/packets/recoit.c.o: ../packets/recoit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/networth.exec.dir/packets/recoit.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packets/recoit.c.o   -c /home/pierre/Documents/git/networth/packets/recoit.c
+CMakeFiles/networth.exec.dir/recoit.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/recoit.c.o: ../recoit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/networth.exec.dir/recoit.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/recoit.c.o   -c /home/pierre/Documents/git/networth/recoit.c
 
-CMakeFiles/networth.exec.dir/packets/recoit.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packets/recoit.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packets/recoit.c > CMakeFiles/networth.exec.dir/packets/recoit.c.i
+CMakeFiles/networth.exec.dir/recoit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/recoit.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/recoit.c > CMakeFiles/networth.exec.dir/recoit.c.i
 
-CMakeFiles/networth.exec.dir/packets/recoit.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packets/recoit.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packets/recoit.c -o CMakeFiles/networth.exec.dir/packets/recoit.c.s
+CMakeFiles/networth.exec.dir/recoit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/recoit.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/recoit.c -o CMakeFiles/networth.exec.dir/recoit.c.s
 
-CMakeFiles/networth.exec.dir/hosts/initHOST.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/hosts/initHOST.c.o: ../hosts/initHOST.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/networth.exec.dir/hosts/initHOST.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/hosts/initHOST.c.o   -c /home/pierre/Documents/git/networth/hosts/initHOST.c
+CMakeFiles/networth.exec.dir/initHOST.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/initHOST.c.o: ../initHOST.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/networth.exec.dir/initHOST.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/initHOST.c.o   -c /home/pierre/Documents/git/networth/initHOST.c
 
-CMakeFiles/networth.exec.dir/hosts/initHOST.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/hosts/initHOST.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/hosts/initHOST.c > CMakeFiles/networth.exec.dir/hosts/initHOST.c.i
+CMakeFiles/networth.exec.dir/initHOST.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/initHOST.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/initHOST.c > CMakeFiles/networth.exec.dir/initHOST.c.i
 
-CMakeFiles/networth.exec.dir/hosts/initHOST.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/hosts/initHOST.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/hosts/initHOST.c -o CMakeFiles/networth.exec.dir/hosts/initHOST.c.s
+CMakeFiles/networth.exec.dir/initHOST.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/initHOST.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/initHOST.c -o CMakeFiles/networth.exec.dir/initHOST.c.s
 
-CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o: ../packets/TraitePaquet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o   -c /home/pierre/Documents/git/networth/packets/TraitePaquet.c
+CMakeFiles/networth.exec.dir/TraitePaquet.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/TraitePaquet.c.o: ../TraitePaquet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/networth.exec.dir/TraitePaquet.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/TraitePaquet.c.o   -c /home/pierre/Documents/git/networth/TraitePaquet.c
 
-CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packets/TraitePaquet.c > CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.i
+CMakeFiles/networth.exec.dir/TraitePaquet.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/TraitePaquet.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/TraitePaquet.c > CMakeFiles/networth.exec.dir/TraitePaquet.c.i
 
-CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packets/TraitePaquet.c -o CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.s
+CMakeFiles/networth.exec.dir/TraitePaquet.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/TraitePaquet.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/TraitePaquet.c -o CMakeFiles/networth.exec.dir/TraitePaquet.c.s
 
-CMakeFiles/networth.exec.dir/packets/sendPacket.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/packets/sendPacket.c.o: ../packets/sendPacket.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/networth.exec.dir/packets/sendPacket.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packets/sendPacket.c.o   -c /home/pierre/Documents/git/networth/packets/sendPacket.c
+CMakeFiles/networth.exec.dir/sendPacket.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/sendPacket.c.o: ../sendPacket.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/networth.exec.dir/sendPacket.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/sendPacket.c.o   -c /home/pierre/Documents/git/networth/sendPacket.c
 
-CMakeFiles/networth.exec.dir/packets/sendPacket.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packets/sendPacket.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packets/sendPacket.c > CMakeFiles/networth.exec.dir/packets/sendPacket.c.i
+CMakeFiles/networth.exec.dir/sendPacket.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/sendPacket.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/sendPacket.c > CMakeFiles/networth.exec.dir/sendPacket.c.i
 
-CMakeFiles/networth.exec.dir/packets/sendPacket.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packets/sendPacket.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packets/sendPacket.c -o CMakeFiles/networth.exec.dir/packets/sendPacket.c.s
+CMakeFiles/networth.exec.dir/sendPacket.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/sendPacket.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/sendPacket.c -o CMakeFiles/networth.exec.dir/sendPacket.c.s
 
-CMakeFiles/networth.exec.dir/packets/packetChecker.c.o: CMakeFiles/networth.exec.dir/flags.make
-CMakeFiles/networth.exec.dir/packets/packetChecker.c.o: ../packets/packetChecker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/networth.exec.dir/packets/packetChecker.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packets/packetChecker.c.o   -c /home/pierre/Documents/git/networth/packets/packetChecker.c
+CMakeFiles/networth.exec.dir/packetChecker.c.o: CMakeFiles/networth.exec.dir/flags.make
+CMakeFiles/networth.exec.dir/packetChecker.c.o: ../packetChecker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/networth.exec.dir/packetChecker.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/networth.exec.dir/packetChecker.c.o   -c /home/pierre/Documents/git/networth/packetChecker.c
 
-CMakeFiles/networth.exec.dir/packets/packetChecker.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packets/packetChecker.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packets/packetChecker.c > CMakeFiles/networth.exec.dir/packets/packetChecker.c.i
+CMakeFiles/networth.exec.dir/packetChecker.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/networth.exec.dir/packetChecker.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pierre/Documents/git/networth/packetChecker.c > CMakeFiles/networth.exec.dir/packetChecker.c.i
 
-CMakeFiles/networth.exec.dir/packets/packetChecker.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packets/packetChecker.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packets/packetChecker.c -o CMakeFiles/networth.exec.dir/packets/packetChecker.c.s
+CMakeFiles/networth.exec.dir/packetChecker.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/networth.exec.dir/packetChecker.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pierre/Documents/git/networth/packetChecker.c -o CMakeFiles/networth.exec.dir/packetChecker.c.s
 
 # Object files for target networth.exec
 networth_exec_OBJECTS = \
-"CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o" \
-"CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o" \
-"CMakeFiles/networth.exec.dir/packets/envoie.c.o" \
+"CMakeFiles/networth.exec.dir/creePriseEmission.c.o" \
+"CMakeFiles/networth.exec.dir/creePriseReception.c.o" \
+"CMakeFiles/networth.exec.dir/envoie.c.o" \
 "CMakeFiles/networth.exec.dir/main.c.o" \
-"CMakeFiles/networth.exec.dir/packets/recoit.c.o" \
-"CMakeFiles/networth.exec.dir/hosts/initHOST.c.o" \
-"CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o" \
-"CMakeFiles/networth.exec.dir/packets/sendPacket.c.o" \
-"CMakeFiles/networth.exec.dir/packets/packetChecker.c.o"
+"CMakeFiles/networth.exec.dir/recoit.c.o" \
+"CMakeFiles/networth.exec.dir/initHOST.c.o" \
+"CMakeFiles/networth.exec.dir/TraitePaquet.c.o" \
+"CMakeFiles/networth.exec.dir/sendPacket.c.o" \
+"CMakeFiles/networth.exec.dir/packetChecker.c.o"
 
 # External object files for target networth.exec
 networth_exec_EXTERNAL_OBJECTS =
 
-networth.exec: CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o
-networth.exec: CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o
-networth.exec: CMakeFiles/networth.exec.dir/packets/envoie.c.o
+networth.exec: CMakeFiles/networth.exec.dir/creePriseEmission.c.o
+networth.exec: CMakeFiles/networth.exec.dir/creePriseReception.c.o
+networth.exec: CMakeFiles/networth.exec.dir/envoie.c.o
 networth.exec: CMakeFiles/networth.exec.dir/main.c.o
-networth.exec: CMakeFiles/networth.exec.dir/packets/recoit.c.o
-networth.exec: CMakeFiles/networth.exec.dir/hosts/initHOST.c.o
-networth.exec: CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o
-networth.exec: CMakeFiles/networth.exec.dir/packets/sendPacket.c.o
-networth.exec: CMakeFiles/networth.exec.dir/packets/packetChecker.c.o
+networth.exec: CMakeFiles/networth.exec.dir/recoit.c.o
+networth.exec: CMakeFiles/networth.exec.dir/initHOST.c.o
+networth.exec: CMakeFiles/networth.exec.dir/TraitePaquet.c.o
+networth.exec: CMakeFiles/networth.exec.dir/sendPacket.c.o
+networth.exec: CMakeFiles/networth.exec.dir/packetChecker.c.o
 networth.exec: CMakeFiles/networth.exec.dir/build.make
 networth.exec: CMakeFiles/networth.exec.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pierre/Documents/git/networth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable networth.exec"

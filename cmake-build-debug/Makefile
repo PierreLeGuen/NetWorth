@@ -136,95 +136,155 @@ networth.exec.debug/fast:
 	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/build
 .PHONY : networth.exec.debug/fast
 
-hosts/creePriseEmission.o: hosts/creePriseEmission.c.o
+TraitePaquet.o: TraitePaquet.c.o
 
-.PHONY : hosts/creePriseEmission.o
-
-# target to build an object file
-hosts/creePriseEmission.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseEmission.c.o
-.PHONY : hosts/creePriseEmission.c.o
-
-hosts/creePriseEmission.i: hosts/creePriseEmission.c.i
-
-.PHONY : hosts/creePriseEmission.i
-
-# target to preprocess a source file
-hosts/creePriseEmission.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseEmission.c.i
-.PHONY : hosts/creePriseEmission.c.i
-
-hosts/creePriseEmission.s: hosts/creePriseEmission.c.s
-
-.PHONY : hosts/creePriseEmission.s
-
-# target to generate assembly for a file
-hosts/creePriseEmission.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseEmission.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseEmission.c.s
-.PHONY : hosts/creePriseEmission.c.s
-
-hosts/creePriseReception.o: hosts/creePriseReception.c.o
-
-.PHONY : hosts/creePriseReception.o
+.PHONY : TraitePaquet.o
 
 # target to build an object file
-hosts/creePriseReception.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseReception.c.o
-.PHONY : hosts/creePriseReception.c.o
+TraitePaquet.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/TraitePaquet.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/TraitePaquet.c.o
+.PHONY : TraitePaquet.c.o
 
-hosts/creePriseReception.i: hosts/creePriseReception.c.i
+TraitePaquet.i: TraitePaquet.c.i
 
-.PHONY : hosts/creePriseReception.i
+.PHONY : TraitePaquet.i
 
 # target to preprocess a source file
-hosts/creePriseReception.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseReception.c.i
-.PHONY : hosts/creePriseReception.c.i
+TraitePaquet.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/TraitePaquet.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/TraitePaquet.c.i
+.PHONY : TraitePaquet.c.i
 
-hosts/creePriseReception.s: hosts/creePriseReception.c.s
+TraitePaquet.s: TraitePaquet.c.s
 
-.PHONY : hosts/creePriseReception.s
+.PHONY : TraitePaquet.s
 
 # target to generate assembly for a file
-hosts/creePriseReception.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/creePriseReception.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/creePriseReception.c.s
-.PHONY : hosts/creePriseReception.c.s
+TraitePaquet.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/TraitePaquet.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/TraitePaquet.c.s
+.PHONY : TraitePaquet.c.s
 
-hosts/initHOST.o: hosts/initHOST.c.o
+creePriseEmission.o: creePriseEmission.c.o
 
-.PHONY : hosts/initHOST.o
+.PHONY : creePriseEmission.o
 
 # target to build an object file
-hosts/initHOST.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/initHOST.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/initHOST.c.o
-.PHONY : hosts/initHOST.c.o
+creePriseEmission.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseEmission.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseEmission.c.o
+.PHONY : creePriseEmission.c.o
 
-hosts/initHOST.i: hosts/initHOST.c.i
+creePriseEmission.i: creePriseEmission.c.i
 
-.PHONY : hosts/initHOST.i
+.PHONY : creePriseEmission.i
 
 # target to preprocess a source file
-hosts/initHOST.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/initHOST.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/initHOST.c.i
-.PHONY : hosts/initHOST.c.i
+creePriseEmission.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseEmission.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseEmission.c.i
+.PHONY : creePriseEmission.c.i
 
-hosts/initHOST.s: hosts/initHOST.c.s
+creePriseEmission.s: creePriseEmission.c.s
 
-.PHONY : hosts/initHOST.s
+.PHONY : creePriseEmission.s
 
 # target to generate assembly for a file
-hosts/initHOST.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/hosts/initHOST.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/hosts/initHOST.c.s
-.PHONY : hosts/initHOST.c.s
+creePriseEmission.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseEmission.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseEmission.c.s
+.PHONY : creePriseEmission.c.s
+
+creePriseReception.o: creePriseReception.c.o
+
+.PHONY : creePriseReception.o
+
+# target to build an object file
+creePriseReception.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseReception.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseReception.c.o
+.PHONY : creePriseReception.c.o
+
+creePriseReception.i: creePriseReception.c.i
+
+.PHONY : creePriseReception.i
+
+# target to preprocess a source file
+creePriseReception.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseReception.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseReception.c.i
+.PHONY : creePriseReception.c.i
+
+creePriseReception.s: creePriseReception.c.s
+
+.PHONY : creePriseReception.s
+
+# target to generate assembly for a file
+creePriseReception.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/creePriseReception.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/creePriseReception.c.s
+.PHONY : creePriseReception.c.s
+
+envoie.o: envoie.c.o
+
+.PHONY : envoie.o
+
+# target to build an object file
+envoie.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/envoie.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/envoie.c.o
+.PHONY : envoie.c.o
+
+envoie.i: envoie.c.i
+
+.PHONY : envoie.i
+
+# target to preprocess a source file
+envoie.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/envoie.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/envoie.c.i
+.PHONY : envoie.c.i
+
+envoie.s: envoie.c.s
+
+.PHONY : envoie.s
+
+# target to generate assembly for a file
+envoie.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/envoie.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/envoie.c.s
+.PHONY : envoie.c.s
+
+initHOST.o: initHOST.c.o
+
+.PHONY : initHOST.o
+
+# target to build an object file
+initHOST.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/initHOST.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/initHOST.c.o
+.PHONY : initHOST.c.o
+
+initHOST.i: initHOST.c.i
+
+.PHONY : initHOST.i
+
+# target to preprocess a source file
+initHOST.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/initHOST.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/initHOST.c.i
+.PHONY : initHOST.c.i
+
+initHOST.s: initHOST.c.s
+
+.PHONY : initHOST.s
+
+# target to generate assembly for a file
+initHOST.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/initHOST.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/initHOST.c.s
+.PHONY : initHOST.c.s
 
 main.o: main.c.o
 
@@ -256,155 +316,95 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/main.c.s
 .PHONY : main.c.s
 
-packets/TraitePaquet.o: packets/TraitePaquet.c.o
+packetChecker.o: packetChecker.c.o
 
-.PHONY : packets/TraitePaquet.o
-
-# target to build an object file
-packets/TraitePaquet.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/TraitePaquet.c.o
-.PHONY : packets/TraitePaquet.c.o
-
-packets/TraitePaquet.i: packets/TraitePaquet.c.i
-
-.PHONY : packets/TraitePaquet.i
-
-# target to preprocess a source file
-packets/TraitePaquet.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/TraitePaquet.c.i
-.PHONY : packets/TraitePaquet.c.i
-
-packets/TraitePaquet.s: packets/TraitePaquet.c.s
-
-.PHONY : packets/TraitePaquet.s
-
-# target to generate assembly for a file
-packets/TraitePaquet.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/TraitePaquet.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/TraitePaquet.c.s
-.PHONY : packets/TraitePaquet.c.s
-
-packets/envoie.o: packets/envoie.c.o
-
-.PHONY : packets/envoie.o
+.PHONY : packetChecker.o
 
 # target to build an object file
-packets/envoie.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/envoie.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/envoie.c.o
-.PHONY : packets/envoie.c.o
+packetChecker.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packetChecker.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packetChecker.c.o
+.PHONY : packetChecker.c.o
 
-packets/envoie.i: packets/envoie.c.i
+packetChecker.i: packetChecker.c.i
 
-.PHONY : packets/envoie.i
+.PHONY : packetChecker.i
 
 # target to preprocess a source file
-packets/envoie.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/envoie.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/envoie.c.i
-.PHONY : packets/envoie.c.i
+packetChecker.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packetChecker.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packetChecker.c.i
+.PHONY : packetChecker.c.i
 
-packets/envoie.s: packets/envoie.c.s
+packetChecker.s: packetChecker.c.s
 
-.PHONY : packets/envoie.s
+.PHONY : packetChecker.s
 
 # target to generate assembly for a file
-packets/envoie.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/envoie.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/envoie.c.s
-.PHONY : packets/envoie.c.s
+packetChecker.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packetChecker.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packetChecker.c.s
+.PHONY : packetChecker.c.s
 
-packets/packetChecker.o: packets/packetChecker.c.o
+recoit.o: recoit.c.o
 
-.PHONY : packets/packetChecker.o
+.PHONY : recoit.o
 
 # target to build an object file
-packets/packetChecker.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/packetChecker.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/packetChecker.c.o
-.PHONY : packets/packetChecker.c.o
+recoit.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/recoit.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/recoit.c.o
+.PHONY : recoit.c.o
 
-packets/packetChecker.i: packets/packetChecker.c.i
+recoit.i: recoit.c.i
 
-.PHONY : packets/packetChecker.i
+.PHONY : recoit.i
 
 # target to preprocess a source file
-packets/packetChecker.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/packetChecker.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/packetChecker.c.i
-.PHONY : packets/packetChecker.c.i
+recoit.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/recoit.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/recoit.c.i
+.PHONY : recoit.c.i
 
-packets/packetChecker.s: packets/packetChecker.c.s
+recoit.s: recoit.c.s
 
-.PHONY : packets/packetChecker.s
+.PHONY : recoit.s
 
 # target to generate assembly for a file
-packets/packetChecker.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/packetChecker.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/packetChecker.c.s
-.PHONY : packets/packetChecker.c.s
+recoit.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/recoit.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/recoit.c.s
+.PHONY : recoit.c.s
 
-packets/recoit.o: packets/recoit.c.o
+sendPacket.o: sendPacket.c.o
 
-.PHONY : packets/recoit.o
+.PHONY : sendPacket.o
 
 # target to build an object file
-packets/recoit.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/recoit.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/recoit.c.o
-.PHONY : packets/recoit.c.o
+sendPacket.c.o:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/sendPacket.c.o
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/sendPacket.c.o
+.PHONY : sendPacket.c.o
 
-packets/recoit.i: packets/recoit.c.i
+sendPacket.i: sendPacket.c.i
 
-.PHONY : packets/recoit.i
-
-# target to preprocess a source file
-packets/recoit.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/recoit.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/recoit.c.i
-.PHONY : packets/recoit.c.i
-
-packets/recoit.s: packets/recoit.c.s
-
-.PHONY : packets/recoit.s
-
-# target to generate assembly for a file
-packets/recoit.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/recoit.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/recoit.c.s
-.PHONY : packets/recoit.c.s
-
-packets/sendPacket.o: packets/sendPacket.c.o
-
-.PHONY : packets/sendPacket.o
-
-# target to build an object file
-packets/sendPacket.c.o:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/sendPacket.c.o
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/sendPacket.c.o
-.PHONY : packets/sendPacket.c.o
-
-packets/sendPacket.i: packets/sendPacket.c.i
-
-.PHONY : packets/sendPacket.i
+.PHONY : sendPacket.i
 
 # target to preprocess a source file
-packets/sendPacket.c.i:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/sendPacket.c.i
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/sendPacket.c.i
-.PHONY : packets/sendPacket.c.i
+sendPacket.c.i:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/sendPacket.c.i
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/sendPacket.c.i
+.PHONY : sendPacket.c.i
 
-packets/sendPacket.s: packets/sendPacket.c.s
+sendPacket.s: sendPacket.c.s
 
-.PHONY : packets/sendPacket.s
+.PHONY : sendPacket.s
 
 # target to generate assembly for a file
-packets/sendPacket.c.s:
-	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/packets/sendPacket.c.s
-	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/packets/sendPacket.c.s
-.PHONY : packets/sendPacket.c.s
+sendPacket.c.s:
+	$(MAKE) -f CMakeFiles/networth.exec.dir/build.make CMakeFiles/networth.exec.dir/sendPacket.c.s
+	$(MAKE) -f CMakeFiles/networth.exec.debug.dir/build.make CMakeFiles/networth.exec.debug.dir/sendPacket.c.s
+.PHONY : sendPacket.c.s
 
 # Help Target
 help:
@@ -416,33 +416,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... networth.exec"
 	@echo "... networth.exec.debug"
-	@echo "... hosts/creePriseEmission.o"
-	@echo "... hosts/creePriseEmission.i"
-	@echo "... hosts/creePriseEmission.s"
-	@echo "... hosts/creePriseReception.o"
-	@echo "... hosts/creePriseReception.i"
-	@echo "... hosts/creePriseReception.s"
-	@echo "... hosts/initHOST.o"
-	@echo "... hosts/initHOST.i"
-	@echo "... hosts/initHOST.s"
+	@echo "... TraitePaquet.o"
+	@echo "... TraitePaquet.i"
+	@echo "... TraitePaquet.s"
+	@echo "... creePriseEmission.o"
+	@echo "... creePriseEmission.i"
+	@echo "... creePriseEmission.s"
+	@echo "... creePriseReception.o"
+	@echo "... creePriseReception.i"
+	@echo "... creePriseReception.s"
+	@echo "... envoie.o"
+	@echo "... envoie.i"
+	@echo "... envoie.s"
+	@echo "... initHOST.o"
+	@echo "... initHOST.i"
+	@echo "... initHOST.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... packets/TraitePaquet.o"
-	@echo "... packets/TraitePaquet.i"
-	@echo "... packets/TraitePaquet.s"
-	@echo "... packets/envoie.o"
-	@echo "... packets/envoie.i"
-	@echo "... packets/envoie.s"
-	@echo "... packets/packetChecker.o"
-	@echo "... packets/packetChecker.i"
-	@echo "... packets/packetChecker.s"
-	@echo "... packets/recoit.o"
-	@echo "... packets/recoit.i"
-	@echo "... packets/recoit.s"
-	@echo "... packets/sendPacket.o"
-	@echo "... packets/sendPacket.i"
-	@echo "... packets/sendPacket.s"
+	@echo "... packetChecker.o"
+	@echo "... packetChecker.i"
+	@echo "... packetChecker.s"
+	@echo "... recoit.o"
+	@echo "... recoit.i"
+	@echo "... recoit.s"
+	@echo "... sendPacket.o"
+	@echo "... sendPacket.i"
+	@echo "... sendPacket.s"
 .PHONY : help
 
 

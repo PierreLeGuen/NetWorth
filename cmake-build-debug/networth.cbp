@@ -138,19 +138,31 @@
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/hosts/creePriseEmission.c">
+		<Unit filename="/home/pierre/Documents/git/networth/TraitePaquet.c">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/hosts/creePriseReception.c">
+		<Unit filename="/home/pierre/Documents/git/networth/TraitePaquet.h">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/hosts/initHOST.c">
+		<Unit filename="/home/pierre/Documents/git/networth/creePriseEmission.c">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/hosts/initHOST.h">
+		<Unit filename="/home/pierre/Documents/git/networth/creePriseReception.c">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/envoie.c">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/initHOST.c">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/initHOST.h">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
@@ -158,39 +170,27 @@
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/TraitePaquet.c">
+		<Unit filename="/home/pierre/Documents/git/networth/packetChecker.c">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/TraitePaquet.h">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/envoie.c">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/packetChecker.c">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/packetChecker.h">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/recoit.c">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/sendPacket.c">
-			<Option target="networth.exec"/>
-			<Option target="networth.exec.debug"/>
-		</Unit>
-		<Unit filename="/home/pierre/Documents/git/networth/packets/sendPacket.h">
+		<Unit filename="/home/pierre/Documents/git/networth/packetChecker.h">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
 		<Unit filename="/home/pierre/Documents/git/networth/primitives.h">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/recoit.c">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/sendPacket.c">
+			<Option target="networth.exec"/>
+			<Option target="networth.exec.debug"/>
+		</Unit>
+		<Unit filename="/home/pierre/Documents/git/networth/sendPacket.h">
 			<Option target="networth.exec"/>
 			<Option target="networth.exec.debug"/>
 		</Unit>
