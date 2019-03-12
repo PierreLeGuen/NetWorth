@@ -41,6 +41,7 @@ Host initPC(int numPC, bool local, bool isLastHost) {
 
         printf("Entrer IP prochain noeud \n");
         fgets(distIP, 20, stdin);
+        distIP[strlen(distIP) - 1] = '\000';
         strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
         strcpy(ADRESSE_RECEPTEUR, distIP);
         // sprintf(charNumPCSender, "%d", numPC);

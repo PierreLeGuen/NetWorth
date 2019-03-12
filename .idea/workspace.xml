@@ -14,17 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9edf142a-c97a-4e4b-b896-7d36190dea3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec.debug" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/networth.exec.debug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/networth.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hosts/initHOST.c" beforeDir="false" afterPath="$PROJECT_DIR$/hosts/initHOST.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packets/TraitePaquet.c" beforeDir="false" afterPath="$PROJECT_DIR$/packets/TraitePaquet.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packets/TraitePaquet.h" beforeDir="false" afterPath="$PROJECT_DIR$/packets/TraitePaquet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packets/sendPacket.c" beforeDir="false" afterPath="$PROJECT_DIR$/packets/sendPacket.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
                 <element signature="e#57#75#0" expanded="true" />
               </folding>
@@ -99,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            <state relative-caret-position="179">
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
               <folding>
                 <element signature="e#41#64#0" expanded="true" />
               </folding>
@@ -155,11 +148,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/initHOST.h" />
         <option value="$PROJECT_DIR$/initHOST.c" />
-        <option value="$PROJECT_DIR$/hosts/initHOST.c" />
         <option value="$PROJECT_DIR$/packets/TraitePaquet.h" />
         <option value="$PROJECT_DIR$/packets/TraitePaquet.c" />
         <option value="$PROJECT_DIR$/packets/sendPacket.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/hosts/initHOST.c" />
       </list>
     </option>
   </component>
@@ -269,7 +262,7 @@
       <workItem from="1552317403163" duration="2945000" />
       <workItem from="1552322390798" duration="1436000" />
       <workItem from="1552375954444" duration="3006000" />
-      <workItem from="1552379764888" duration="500000" />
+      <workItem from="1552379764888" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="serial_initPC">
       <created>1552070465695</created>
@@ -352,7 +345,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61073000" />
+    <option name="totallyTimeSpent" value="61608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -416,6 +409,11 @@
           <url>file://$PROJECT_DIR$/main.c</url>
           <line>56</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/hosts/initHOST.c</url>
+          <line>43</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -579,16 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="e#41#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packets/sendPacket.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -612,9 +600,19 @@
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
             <element signature="e#57#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+          <folding>
+            <element signature="e#41#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

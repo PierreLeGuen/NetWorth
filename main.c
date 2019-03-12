@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
             recvPacket = traitePaquet(AnHost, buffer);
             asToken = true;
         }
-        if (asToken) {gi
+        if (asToken) {
             bool wantToSendMessage = false;
             printf("Voulez-vous envoyer un message ?");
             if (fgets(line, 10, stdin) && sscanf(line, "%d", &wantToSendMessage) != 1)
