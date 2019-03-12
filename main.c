@@ -55,7 +55,11 @@ int main(int argc, char **argv) {
         if (!asToken) {
             recoit(AnHost.PRISE_RECEPTION, buffer, sizeof(buffer) - 1);
             recvPacket = traitePaquet(AnHost, buffer);
-            asToken = true;
+            if (recvPacket.slotReserve == AnHost.HOST_NUMBER) {
+                asToken = true;
+            }
+            // if(buffer[6]=='2' || recvPacket.HOST_NUMBER == AnHost.HOST_NUMBER){
+            //}
         }
         if (asToken) {
             bool wantToSendMessage = false;
@@ -70,7 +74,8 @@ int main(int argc, char **argv) {
                     sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, 0, 0,
                             0, "\n");
                 } else {
-                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, AnHost.HOST_NUMBER + 1, 0,
+                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, AnHost.HOST_NUMBER + 1,
+                            AnHost.HOST_NUMBER + 1,
                             0, "\n");
                 }
                 envoie(AnHost.PRISE_EMISSION, buffer, strlen(buffer));

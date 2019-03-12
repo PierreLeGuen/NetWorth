@@ -13,7 +13,7 @@ typedef struct paquet {
     bool containsMsg;
     int HOST_NUMBER;
     char *ADDRESSE;
-    int AccuseReception;
+    int slotReserve;
     unsigned short CRC;
     char MESSAGE[LONGUEUR_MESSAGE];
 } Paquet;

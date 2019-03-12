@@ -14,9 +14,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9edf142a-c97a-4e4b-b896-7d36190dea3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.debug.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/networth.exec.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/networth.exec.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packets/TraitePaquet.c" beforeDir="false" afterPath="$PROJECT_DIR$/packets/TraitePaquet.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packets/TraitePaquet.h" beforeDir="false" afterPath="$PROJECT_DIR$/packets/TraitePaquet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packets/sendPacket.c" beforeDir="false" afterPath="$PROJECT_DIR$/packets/sendPacket.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packets/packetChecker.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="208">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -40,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packets/sendPacket.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
               <folding>
                 <element signature="e#40#58#0" expanded="true" />
               </folding>
@@ -52,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packets/TraitePaquet.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+            <state relative-caret-position="878">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#41#59#0" expanded="true" />
               </folding>
@@ -64,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hosts/initHOST.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="442">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -79,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="1430">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#57#75#0" expanded="true" />
               </folding>
@@ -91,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+            <state relative-caret-position="-1910">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding>
                 <element signature="e#41#64#0" expanded="true" />
               </folding>
@@ -104,10 +107,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packets/sendPacket.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packets/TraitePaquet.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="390">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -119,6 +131,8 @@
       <find>send</find>
       <find>128</find>
       <find>MESSA</find>
+      <find>bool</find>
+      <find>%d,%d,%d,%d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,11 +161,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/initHOST.h" />
         <option value="$PROJECT_DIR$/initHOST.c" />
+        <option value="$PROJECT_DIR$/hosts/initHOST.c" />
         <option value="$PROJECT_DIR$/packets/TraitePaquet.h" />
         <option value="$PROJECT_DIR$/packets/TraitePaquet.c" />
         <option value="$PROJECT_DIR$/packets/sendPacket.c" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/hosts/initHOST.c" />
       </list>
     </option>
   </component>
@@ -165,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,11 +192,15 @@
               <item name="networth" type="462c0819:PsiDirectoryNode" />
               <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="networth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="networth" type="462c0819:PsiDirectoryNode" />
+              <item name="hosts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,6 +211,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packets" />
       <recent name="$PROJECT_DIR$/hosts" />
@@ -216,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.networth.exec">
+  <component name="RunManager" selected="Application.networth.exec.debug">
     <configuration name="networth.exec" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="networth" TARGET_NAME="networth.exec" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="networth" RUN_TARGET_NAME="networth.exec">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -256,7 +278,8 @@
       <workItem from="1552317403163" duration="2945000" />
       <workItem from="1552322390798" duration="1436000" />
       <workItem from="1552375954444" duration="3006000" />
-      <workItem from="1552379764888" duration="1277000" />
+      <workItem from="1552379764888" duration="8175000" />
+      <workItem from="1552420880717" duration="2300000" />
     </task>
     <task id="LOCAL-00001" summary="serial_initPC">
       <created>1552070465695</created>
@@ -342,28 +365,35 @@
       <option name="project" value="LOCAL" />
       <updated>1552380912682</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add exec">
+      <created>1552381052251</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552381052251</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61850000" />
+    <option name="totallyTimeSpent" value="71048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26149732" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2647059" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32870865" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.51016045" side_tool="true" weight="0.5049073" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" visible="true" weight="0.32715377" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.48342246" weight="0.32715377" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32977587" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49625668" weight="0.27589968" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" weight="0.5049073" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.48983958" visible="true" weight="0.4427481" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -388,7 +418,8 @@
     <MESSAGE value="add hosts&#10;-single file" />
     <MESSAGE value="Rearrange folders" />
     <MESSAGE value="Fix priseEmission" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix priseEmission" />
+    <MESSAGE value="Add exec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add exec" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -397,24 +428,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/packets/packetChecker.c</url>
-          <line>7</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/packets/TraitePaquet.c</url>
+          <line>28</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/packets/TraitePaquet.c</url>
-          <line>30</line>
-          <option name="timeStamp" value="49" />
+          <url>file://$PROJECT_DIR$/packets/sendPacket.c</url>
+          <line>44</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.c</url>
-          <line>56</line>
-          <option name="timeStamp" value="50" />
+          <line>76</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/hosts/initHOST.c</url>
-          <line>43</line>
-          <option name="timeStamp" value="53" />
+          <url>file://$PROJECT_DIR$/main.c</url>
+          <line>73</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -497,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packets/sendPacket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packets/packetChecker.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -550,17 +574,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packets/packetChecker.c">
+    <entry file="file://$PROJECT_DIR$/hosts/initHOST.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="442">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hosts/initHOST.h">
+    <entry file="file://$PROJECT_DIR$/packets/TraitePaquet.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="390">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packets/sendPacket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packets/packetChecker.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -571,49 +609,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packets/TraitePaquet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packets/sendPacket.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packets/TraitePaquet.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="878">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="e#41#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/packets/sendPacket.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="180">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding>
-            <element signature="e#57#75#0" expanded="true" />
+            <element signature="e#40#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hosts/initHOST.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+        <state relative-caret-position="-1910">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#41#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#57#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
