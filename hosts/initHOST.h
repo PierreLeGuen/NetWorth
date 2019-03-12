@@ -18,6 +18,6 @@ typedef  struct host{
     int PRISE_RECEPTION;
 } Host;
 
-char *addHost();
+Host addHost();
 
 #endif //NETWORTH_INITPC_H

@@ -6,22 +6,22 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(networth.exec
-        creePriseEmission.c
-        creePriseReception.c
-        envoie.c
+        hosts/creePriseEmission.c
+        hosts/creePriseReception.c
+        packets/envoie.c
         main.c
         #exempleCOMPLET-PC2.c
         Makefile
         primitives.h
         README.md
-        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h packetChecker.c packetChecker.h)
+        packets/recoit.c hosts/initHOST.c hosts/initHOST.h packets/TraitePaquet.c packets/TraitePaquet.h packets/sendPacket.c packets/sendPacket.h packets/packetChecker.c packets/packetChecker.h)
 add_executable(networth.exec.debug
-        creePriseEmission.c
-        creePriseReception.c
-        envoie.c
+        hosts/creePriseEmission.c
+        hosts/creePriseReception.c
+        packets/envoie.c
         main.c
         #exempleCOMPLET-PC2.c
         Makefile
         primitives.h
         README.md
-        recoit.c initHOST.c initHOST.h packets.c packets.h sendPacket.c sendPacket.h packetChecker.c packetChecker.h)
+        packets/recoit.c hosts/initHOST.c hosts/initHOST.h packets/TraitePaquet.c packets/TraitePaquet.h packets/sendPacket.c packets/sendPacket.h packets/packetChecker.c packets/packetChecker.h)

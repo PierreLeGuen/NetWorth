@@ -2,7 +2,7 @@
 // Created by pierre on 09/03/19.
 //
 
-#include "initHOST.h"
+#include "hosts/initHOST.h"
 
 #ifndef NETWORTH_SENDPACKET_H
 #define NETWORTH_SENDPACKET_H

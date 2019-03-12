@@ -5,7 +5,7 @@
 #include <string.h>
 
 #include "sendPacket.h"
-#include "packets.h"
+#include "TraitePaquet.h"
 #include "primitives.h"
 #include "packetChecker.h"
 

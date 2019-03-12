@@ -5,7 +5,7 @@
 #ifndef NETWORTH_PACKETS_H
 #define NETWORTH_PACKETS_H
 
-#include "initHOST.h"
+#include "hosts/initHOST.h"
 
 #define LONGUEUR_MESSAGE    2056
 

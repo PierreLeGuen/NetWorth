@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include "packets.h"
+#include "TraitePaquet.h"
 #include <string.h>
 #include "primitives.h"
 #include "packetChecker.h"

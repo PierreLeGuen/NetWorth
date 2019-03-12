@@ -1,52 +1,25 @@
-# Makefile
-# Compilation des primitives UDP
-#
-
-#CFLAGS	+= -Wall -Wmissing-prototypes -Werror
-
+TARGET = networth.exec
+LIBS = -lm
 CC = gcc
+CFLAGS = -g -Wall
 
-SOURCES_ALL	= \
-	creePriseReception.c\
-	creePriseEmission.c\
-	recoit.c\
-	envoie.c\
-	\
-	exempleCOMPLET-PC1.c\
-	\
-	exempleCOMPLET-PC2.c\
-	\
-	exempleCOMPLET-PC3.c\
-	\
-	initPC.h\
-	initPC.c\
-	packets.h\
-	packets.c\
-	primitives.h\
-	\
-	Makefile
+.PHONY: default all clean
 
-#ARCHIVE_NAME = primitivesReseauSILR1.tgz
+default: $(TARGET)
+all: default
 
-all: exempleCOMPLET-PC1 exempleCOMPLET-PC2 exempleCOMPLET-PC3 primitives.a
+OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
+HEADERS = $(wildcard *.h)
+
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PRECIOUS: $(TARGET) $(OBJECTS)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
 clean:
-	rm -f *.a *.o core
+	-rm -f *.o
+	-rm -f $(TARGET)
 
-#archive: $(ARCHIVE_NAME)
-
-#$(ARCHIVE_NAME): $(SOURCES_ALL)
-#	tar zcf $@ $(SOURCES_ALL)
-
-exempleCOMPLET-PC1: exempleCOMPLET-PC1.o primitives.a
-	$(CC) -o $@ $^
-
-exempleCOMPLET-PC2: exempleCOMPLET-PC2.o primitives.a
-	$(CC) -o $@ $^
-
-exempleCOMPLET-PC3: exempleCOMPLET-PC3.o primitives.a
-	$(CC) -o $@ $^
-
-primitives.a: envoie.o recoit.o creePriseEmission.o creePriseReception.o
-	ar rv $@ $^
-	ranlib $@
