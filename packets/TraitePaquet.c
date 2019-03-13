@@ -29,6 +29,7 @@ Paquet traitePaquet(Host AnHost, char *buffer) {
                 recvCrc = crc16(&recvPacket.MESSAGE, strlen(recvPacket.MESSAGE));
                 if (recvCrc == recvPacket.CRC) {
                     printf("--- MODE AVEC DÉTECTION D'ERREUR CRC : CORRECT ---\n");
+                    printf("-- CRC attendu : %d, CRC reçu : %d\n", recvPacket.CRC, recvCrc);
                     printf("-- MESSAGE : %*s \n\n", 10, recvPacket.MESSAGE);
                 } else {
                     printf("--- MODE AVEC DÉTECTION D'ERREUR CRC : FAUX ---\n");
