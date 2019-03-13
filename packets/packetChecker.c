@@ -1,7 +1,3 @@
-//
-// Created by pierre on 09/03/19.
-//
-
 #include "packetChecker.h"
 
 unsigned short crc16(const unsigned char *data_p, unsigned char length) {
