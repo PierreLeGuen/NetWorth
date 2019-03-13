@@ -19,24 +19,13 @@ Host initPC(int numPC, bool local, bool isLastHost) {
     int priseEmission, priseReception;
     int PORT_EMISSION = 19000 + (1 + numPC) * 50;
     int PORT_RECEPTION = 19000 + numPC * 50;
-    /*
-    char charNumPCSender[1];
-    char charNumPCReceiver[1];
-    char charPriseEmission[1];
-    char charPriseReception[1];
-    char charPortReception[5];
-    char charPortEmission[5];
-     */
+
     char *ADRESSE_EMETTEUR = malloc(15 * sizeof(char));
     char *ADRESSE_RECEPTEUR = malloc(15 * sizeof(char));
 
     if (local) {
         strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
         strcpy(ADRESSE_RECEPTEUR, "127.0.0.1");
-        /*
-        sprintf(charNumPCSender, "%d", numPC);
-        sprintf(charNumPCReceiver, "%d", numPC + 1);
-         */
     } else {
 
         printf("Entrer IP prochain noeud \n");
@@ -44,12 +33,9 @@ Host initPC(int numPC, bool local, bool isLastHost) {
         distIP[strlen(distIP) - 1] = '\000';
         strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
         strcpy(ADRESSE_RECEPTEUR, distIP);
-        // sprintf(charNumPCSender, "%d", numPC);
-        // sprintf(charNumPCReceiver, "%d", numPC + 1);
     }
     if (isLastHost) {
         PORT_EMISSION = 19000;
-        // sprintf(charNumPCReceiver, "%d", 0);
     }
     if (distIP[0] != (char) 0) {
         priseEmission = creePriseEmission(distIP, PORT_EMISSION);
@@ -97,14 +83,14 @@ Host addHost() {
     int hostNumber = -1;
     char distIP[20] = {0};
 
-    printf("Hote en loopback ? (true/false) \n");
+    printf("Hote en loopback ? (1/0) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLocalHost) != 1)
         isLocalHost = 0;
     printf("Choix du numéro d'hote (de 0 à 9, numérotation continue) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &hostNumber) != 1)
         hostNumber = 0;
     if(hostNumber!=0){
-        printf("C'était le dernier hote ? (true/false) \n");
+        printf("C'était le dernier hote ? (1/0) \n");
         if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLastHost) != 1)
             isLastHost = 0;
     }
