@@ -1,7 +1,3 @@
-//
-// Created by pierre on 09/03/19.
-//
-
 #include "../hosts/initHOST.h"
 
 #ifndef NETWORTH_SENDPACKET_H
