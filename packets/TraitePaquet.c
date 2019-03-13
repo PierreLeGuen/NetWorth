@@ -1,6 +1,4 @@
-//
-// Created by pierre on 08/03/19.
-//
+
 
 #include <stdio.h>
 #include "TraitePaquet.h"
