@@ -1,7 +1,3 @@
-//
-// Created by pierre on 08/03/19.
-//
-
 #ifndef NETWORTH_PACKETS_H
 #define NETWORTH_PACKETS_H
 
