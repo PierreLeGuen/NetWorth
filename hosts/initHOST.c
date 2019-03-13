@@ -1,7 +1,3 @@
-//
-// Created by pierre on 08/03/19.
-//
-
 #include <sys/socket.h>
 #include <stdio.h>
 #include "initHOST.h"
