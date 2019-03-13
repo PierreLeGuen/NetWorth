@@ -3,7 +3,7 @@ LIBS = \
 	./packets/*.c\
 
 all:
-	gcc -o main.exec main.c $(LIBS)
+	gcc -o networth.exec main.c $(LIBS)
 
 clean:
 	-rm -f *.exec
