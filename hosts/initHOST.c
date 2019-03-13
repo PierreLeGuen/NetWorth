@@ -83,14 +83,14 @@ Host addHost() {
     int hostNumber = -1;
     char distIP[20] = {0};
 
-    printf("Hote en loopback ? (1/0) \n");
+    printf("Hote en loopback ? (Oui : 1/Non : 0) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLocalHost) != 1)
         isLocalHost = 0;
     printf("Choix du numéro d'hote (de 0 à 9, numérotation continue) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &hostNumber) != 1)
         hostNumber = 0;
     if(hostNumber!=0){
-        printf("C'était le dernier hote ? (1/0) \n");
+        printf("C'était le dernier hote ? (Oui : 1/Non : 0) \n");
         if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLastHost) != 1)
             isLastHost = 0;
     }
