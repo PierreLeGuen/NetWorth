@@ -17,14 +17,14 @@ void sendNewPacket(Host srcHost, char *buffer) {
     int destHostNumber = -1;
     bool isModeConnecte = false;
 
-    printf("Saisir message :\n");
+    printf("-- Saisir message :\n");
     fgets(currPacket.MESSAGE, 2000, stdin);
 
-    printf("Destinataire (numPC) : \n");
+    printf("-- Destinataire (numPC) : \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
         destHostNumber = 0;
 
-    printf("Mode avec CRC ? (1/0) \n");
+    printf("-- Mode avec CRC ? (1/0) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isModeConnecte) != 1)
         isModeConnecte = 0;
 
@@ -44,7 +44,7 @@ void sendNewPacket(Host srcHost, char *buffer) {
         //TODO ERREUR AU niveau du CRC
         sprintf(buffer, "%d,%d,%d,%d,%d,%s", currPacket.containsMsg, srcHost.HOST_NUMBER, currPacket.HOST_NUMBER,
                 currPacket.slotReserve, currPacket.CRC, currPacket.MESSAGE);
-        printf("Presser ENTREE pour envoyer le message\n");
+        printf("--- Presser ENTREE pour envoyer le message ---\n");
         while (getchar() != '\n');
         envoie(srcHost.PRISE_EMISSION, buffer, strlen(buffer));
         // envoie(srcHost.PRISE_EMISSION, buffer, strlen(buffer));
