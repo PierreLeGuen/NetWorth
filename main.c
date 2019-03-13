@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
         }
         if (asToken) {
             bool wantToSendMessage = false;
-            printf("-- Envoyer un message ?(Oui : 1/Non : 0\n");
+            printf("-- Envoyer un message ?(Oui : 1/Non : 0)\n");
             if (fgets(line, 10, stdin) && sscanf(line, "%d", &wantToSendMessage) != 1)
                 wantToSendMessage = 0;
             if (wantToSendMessage) {
