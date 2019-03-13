@@ -1,6 +1,3 @@
-//
-// Created by pierre on 09/03/19.
-//
 
 #ifndef NETWORTH_PACKETCHECKER_H
 #define NETWORTH_PACKETCHECKER_H
