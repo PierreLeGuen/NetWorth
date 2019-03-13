@@ -1,8 +1,8 @@
 /*
  * creePriseReception.c
- * Ouverture d'une socket UDP et affectation d'un numéro de port
+ * Ouverture d'une socket UDP et affectation d'un numï¿½ro de port
  *
- * Travaux Pratiques réseau SILR 1
+ * Travaux Pratiques rï¿½seau SILR 1
  * Nicolas Normand
  * 1999-2001
  */
@@ -13,7 +13,7 @@
 #include <stdlib.h>	// exit
 #include <string.h>	// memset
 
-#include "primitives.h"
+#include "../primitives.h"
 
 int creePriseReception (int port)
 {
@@ -21,7 +21,7 @@ int creePriseReception (int port)
     struct sockaddr_in	address;
 
 /*
- * Création d'une socket UDP :
+ * Crï¿½ation d'une socket UDP :
  * PF_INET : famille de protocoles Internet
  * SOCK_DGRAM : communication par datagrammes
  * 0 : protocole UDP implicite (car Inet + Dgram)
@@ -33,15 +33,15 @@ int creePriseReception (int port)
     }
 
 /*
- * Création d'une structure d'adresse de socket
+ * Crï¿½ation d'une structure d'adresse de socket
  *
  * sin_family = AF_INET : famille d'adresses Internet
  *
- * sin_addr.s_addr = INADDR_ANY : l'adresse de réception n'est pas spécifiée
- *   (la requête peut aboutir sur n'importe quelle interface locale)
+ * sin_addr.s_addr = INADDR_ANY : l'adresse de rï¿½ception n'est pas spï¿½cifiï¿½e
+ *   (la requï¿½te peut aboutir sur n'importe quelle interface locale)
  *
- * sin_port = htons (port) : le port de réception est spécifié,
- *   conversion au format reseau (big endian) du numéro de port,
+ * sin_port = htons (port) : le port de rï¿½ception est spï¿½cifiï¿½,
+ *   conversion au format reseau (big endian) du numï¿½ro de port,
  *   htons : host to network short integer)
  */
     memset (&address, 0, sizeof (address));
@@ -50,7 +50,7 @@ int creePriseReception (int port)
     address.sin_port = htons (port);
 
 /*
- * Affectation d'une adresse locale à la socket
+ * Affectation d'une adresse locale ï¿½ la socket
  */
     if (bind (sock,
 	      (struct sockaddr*) &address,

@@ -6,7 +6,7 @@
 
 #include "sendPacket.h"
 #include "TraitePaquet.h"
-#include "primitives.h"
+#include "../primitives.h"
 #include "packetChecker.h"
 
 

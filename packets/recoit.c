@@ -2,14 +2,14 @@
  * recoit.c
  * Attente d'un datagramme sur une socket UDP
  *
- * Travaux Pratiques réseau SILR 1
+ * Travaux Pratiques rï¿½seau SILR 1
  * Nicolas Normand
  * 1999-2001
  */
 
 #include <unistd.h>
 
-#include "primitives.h"
+#include "../primitives.h"
 
 int recoit (int prise, char *buffer, size_t taille)
 {
@@ -18,4 +18,3 @@ int recoit (int prise, char *buffer, size_t taille)
     else
 	return -1;
 }
-

@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "TraitePaquet.h"
 #include <string.h>
-#include "primitives.h"
+#include "../primitives.h"
 #include "packetChecker.h"
 
 

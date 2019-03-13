@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <stdio.h>
 #include "initHOST.h"
-#include "primitives.h"
+#include "../primitives.h"
 #include "string.h"
 #include <stdlib.h>
 
