@@ -24,7 +24,7 @@ void sendNewPacket(Host srcHost, char *buffer) {
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
         destHostNumber = 0;
 
-    printf("-- Mode avec CRC ? (1/0) \n");
+    printf("-- Mode avec CRC ? (Oui : 1/Non : 0) \n");
     if (fgets(line, 10, stdin) && sscanf(line, "%d", &isModeConnecte) != 1)
         isModeConnecte = 0;
 
@@ -57,26 +57,4 @@ void sendNewPacket(Host srcHost, char *buffer) {
                 currPacket.slotReserve, 0, currPacket.MESSAGE);
         envoie(srcHost.PRISE_EMISSION, buffer, strlen(buffer));
     }
-
-
-    /**
-     * Vérification ACCUSE DE RECEPTION
-     */
-/*
-   if(isModeConnecte){
-       char recvBuffer[LONGUEUR_MESSAGE];
-       recoit(srcHost.PRISE_RECEPTION, recvBuffer, sizeof(recvBuffer) - 1);
-       Host destHost = {0};
-       Host tempHost = {0};
-       Paquet recvARPacket = {0};
-       sscanf(recvBuffer, "%d,%d,%d,%d,%64[^\\n]s", &tempHost.HOST_NUMBER, &destHost.HOST_NUMBER, &recvARPacket.AccuseReception,
-              &recvARPacket.CRC, recvARPacket.MESSAGE);
-       if(recvARPacket.AccuseReception==0){
-           printf("Accusé de réception reçu \n\n");
-       } else {
-           printf("Oups c'est cassé");
-           // envoie(srcHost.PRISE_EMISSION, buffer, strlen(buffer));
-           //TODO Renvoyer le msg;
-       }
-   }*/
 }
