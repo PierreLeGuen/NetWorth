@@ -1,9 +1,10 @@
 #include <sys/socket.h>
 #include <stdio.h>
 #include "initHOST.h"
-#include "../primitives.h"
+#include "utils/primitives.h"
 #include "string.h"
 #include <stdlib.h>
+#include <utils/userinput.h>
 
 Host initPC(int numPC, bool local, bool isLastHost) {
     Host AnHost = {0};
@@ -20,10 +21,15 @@ Host initPC(int numPC, bool local, bool isLastHost) {
     char *ADRESSE_RECEPTEUR = malloc(15 * sizeof(char));
 
     if (local) {
+        /*
+         * Utilisation de l'adresse de loopback
+         */
         strcpy(ADRESSE_EMETTEUR, "127.0.0.1");
         strcpy(ADRESSE_RECEPTEUR, "127.0.0.1");
     } else {
-
+        /*
+         * Si nous sommes dans un véritable réseau
+         */
         printf("Entrer IP prochain noeud \n");
         fgets(distIP, 20, stdin);
         distIP[strlen(distIP) - 1] = '\000';
@@ -40,27 +46,6 @@ Host initPC(int numPC, bool local, bool isLastHost) {
         priseEmission = creePriseEmission(ADRESSE_RECEPTEUR, PORT_EMISSION);
     }
     priseReception = creePriseReception(PORT_RECEPTION);
-/*
-    sprintf(charPriseEmission, "%d", priseEmission);
-    sprintf(charPriseReception, "%d", priseReception);
-    sprintf(charPortReception, "%d", PORT_RECEPTION);
-    sprintf(charPortEmission, "%d", PORT_EMISSION);
-
-
-    strncat(serialInitPC, charNumPCSender, 1);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, charPriseEmission, 1);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, charPriseReception, 1);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_EMETTEUR, 9);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, ADRESSE_RECEPTEUR, 9);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, charPortReception, 5);
-    strncat(serialInitPC, ",", 1);
-    strncat(serialInitPC, charPortEmission, 5);
-*/
     AnHost.PORT_EMISSION = PORT_EMISSION;
     AnHost.PORT_RECEPTION = PORT_RECEPTION;
     AnHost.PRISE_EMISSION = priseEmission;
@@ -80,15 +65,12 @@ Host addHost() {
     char distIP[20] = {0};
 
     printf("Hote en loopback ? (Oui : 1/Non : 0) \n");
-    if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLocalHost) != 1)
-        isLocalHost = 0;
+    isLocalHost = interaction_utilisateur();
     printf("Choix du numéro d'hote (de 0 à 9, numérotation continue) \n");
-    if (fgets(line, 10, stdin) && sscanf(line, "%d", &hostNumber) != 1)
-        hostNumber = 0;
+    hostNumber = interaction_utilisateur();
     if(hostNumber!=0){
         printf("C'était le dernier hote ? (Oui : 1/Non : 0) \n");
-        if (fgets(line, 10, stdin) && sscanf(line, "%d", &isLastHost) != 1)
-            isLastHost = 0;
+        isLastHost = interaction_utilisateur();
     }
     return initPC(hostNumber, isLocalHost, isLastHost);
 }

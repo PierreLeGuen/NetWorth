@@ -12,7 +12,7 @@
 #include <arpa/inet.h>  // sockaddr_in
 #include <stdlib.h>
 
-#include "../primitives.h"	// exit
+#include "utils/primitives.h"    // exit
 #include <string.h>	// memset
 
 int creePriseEmission (char *server, int port)

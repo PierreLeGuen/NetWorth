@@ -9,7 +9,7 @@
 
 #include <unistd.h>
 
-#include "../primitives.h"
+#include "utils/primitives.h"
 
 int recoit (int prise, char *buffer, size_t taille)
 {

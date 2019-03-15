@@ -1,35 +1,40 @@
 
-#define LONGUEUR_MESSAGE    2056
+/**
+ * Nicolas Vautier, Florian Daniel, Carlos Gomez-Tapia et Pierre Le Guen
+ *
+ * Fonctionnalités:
+ * - Présence d'un unique message sur le ring;
+ * - Choix entre loopback ou réseau réel;
+ * - Calcul d'erreur (CRC)
+ */
 
-//#include <curses.h>
+#define LONGUEUR_MESSAGE    2056
 #include <stdio.h>
 #include <string.h>
 #include "hosts/initHOST.h"
 #include "packets/TraitePaquet.h"
 #include "packets/sendPacket.h"
-#include "primitives.h"
+#include "utils/primitives.h"
+#include "utils/userinput.h"
 
-/* emetteur (ma machine) ---> recepteur (machine suivante) */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-noreturn"
 
-
-
-enum State {
-    standby, listen, send
-} currStatus;
-
-/* Paquet <=> struct paquet */
-
-
-
+/*
+ * Toutes les descriptions des fonctions sont présentes dans les header de chaque fonction.
+ */
 int main(int argc, char **argv) {
-    char line[10];
     Host AnHost;
+    Paquet recvPacket = {0};
 
+    char line[10];
     char buffer[LONGUEUR_MESSAGE] = {0};
     bool stop = false;
     bool asToken = false;
-    Paquet recvPacket = {0};
 
+    /*
+     * Initialisation de l'hote au lancement
+     */
     AnHost = addHost();
 
     printf("-- HOTE n° : %d\n", AnHost.HOST_NUMBER);
@@ -49,29 +54,22 @@ int main(int argc, char **argv) {
             recvPacket = traitePaquet(AnHost, buffer);
             if (recvPacket.slotReserve == AnHost.HOST_NUMBER) {
                 asToken = true;
+                printf("--- TOKEN LIBRE ---\n");
             }
         }
         if (asToken) {
             bool wantToSendMessage = false;
             printf("-- Envoyer un message ?(Oui : 1/Non : 0)\n");
-            if (fgets(line, 10, stdin) && sscanf(line, "%d", &wantToSendMessage) != 1)
-                wantToSendMessage = 0;
+            wantToSendMessage = interaction_utilisateur();
             if (wantToSendMessage) {
                 sendNewPacket(AnHost, buffer);
             } else {
-                memset(buffer, '\0', sizeof(buffer));
-                if (AnHost.PORT_EMISSION == 19000) {
-                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, 0, 0,
-                            0, "\n");
-                } else {
-                    sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, AnHost.HOST_NUMBER, AnHost.HOST_NUMBER + 1,
-                            AnHost.HOST_NUMBER + 1,
-                            0, "\n");
-                }
-                envoie(AnHost.PRISE_EMISSION, buffer, strlen(buffer));
+                sendPacket(AnHost, buffer);
             }
             asToken = false;
         }
     }
     return 0;
 }
+
+#pragma clang diagnostic pop

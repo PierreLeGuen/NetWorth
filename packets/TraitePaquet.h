@@ -4,7 +4,9 @@
 #include "../hosts/initHOST.h"
 
 #define LONGUEUR_MESSAGE    2056
-
+/**
+ *
+ */
 typedef struct paquet {
     bool containsMsg;
     int HOST_NUMBER;
@@ -17,8 +19,8 @@ typedef struct paquet {
 /**
  * @brief Traite le paquet (désencapsulation)
  *
- * @param AnHost An Host struct
- * @param buffer A Buffer containing the message.
+ * @param AnHost Une structure Host
+ * @param buffer Un buffer contenant le message reçu
  */
 Paquet traitePaquet(Host AnHost, char *buffer);
 

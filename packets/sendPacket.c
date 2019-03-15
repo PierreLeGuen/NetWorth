@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+#include <utils/userinput.h>
 
 #include "sendPacket.h"
 #include "TraitePaquet.h"
-#include "../primitives.h"
+#include "utils/primitives.h"
 #include "packetChecker.h"
 
 
@@ -18,12 +19,10 @@ void sendNewPacket(Host srcHost, char *buffer) {
     fgets(currPacket.MESSAGE, 2000, stdin);
 
     printf("-- Destinataire (numPC) : \n");
-    if (fgets(line, 10, stdin) && sscanf(line, "%d", &destHostNumber) != 1)
-        destHostNumber = 0;
+    destHostNumber = interaction_utilisateur();
 
     printf("-- Mode avec CRC ? (Oui : 1/Non : 0) \n");
-    if (fgets(line, 10, stdin) && sscanf(line, "%d", &isModeConnecte) != 1)
-        isModeConnecte = 0;
+    isModeConnecte = interaction_utilisateur();
 
     memset(buffer, '\0', sizeof(buffer));
     currPacket.HOST_NUMBER = destHostNumber;
@@ -54,4 +53,17 @@ void sendNewPacket(Host srcHost, char *buffer) {
                 currPacket.slotReserve, 0, currPacket.MESSAGE);
         envoie(srcHost.PRISE_EMISSION, buffer, strlen(buffer));
     }
+}
+
+void sendPacket(Host srcHot, char *buffer) {
+    memset(buffer, '\0', sizeof(buffer));
+    if (srcHot.PORT_EMISSION == 19000) {
+        sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, srcHot.HOST_NUMBER, 0, 0,
+                0, "\n");
+    } else {
+        sprintf(buffer, "%d,%d,%d,%d,%d,%s", 0, srcHot.HOST_NUMBER, srcHot.HOST_NUMBER + 1,
+                srcHot.HOST_NUMBER + 1,
+                0, "\n");
+    }
+    envoie(srcHot.PRISE_EMISSION, buffer, strlen(buffer));
 }
