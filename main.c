@@ -2,10 +2,11 @@
 /**
  * Nicolas Vautier, Florian Daniel, Carlos Gomez-Tapia et Pierre Le Guen
  *
- * Fonctionnalités:
+ * Fonctionnalités principales :
  * - Présence d'un unique message sur le ring;
  * - Choix entre loopback ou réseau réel;
- * - Calcul d'erreur (CRC)
+ * - Message en broadcast;
+ * - Calcul d'erreur (CRC).
  */
 
 #define LONGUEUR_MESSAGE    2056
