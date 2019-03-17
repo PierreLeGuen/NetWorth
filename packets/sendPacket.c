@@ -18,7 +18,7 @@ void sendNewPacket(Host srcHost, char *buffer) {
     printf("-- Saisir message :\n");
     fgets(currPacket.MESSAGE, 2000, stdin);
 
-    printf("-- Destinataire (numPC) : \n");
+    printf("-- Destinataire (numPC ou -1 pour broadcast) : \n");
     destHostNumber = interaction_utilisateur();
 
     printf("-- Mode avec CRC ? (Oui : 1/Non : 0) \n");
