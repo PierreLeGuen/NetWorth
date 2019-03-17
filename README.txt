@@ -7,6 +7,10 @@ Usage :
 	($ ./networth.exec)
 
     - Choisir si vous êtes en loopback ou sur un réseau.
+    - Saisir le numéro d'hôte correspondant au numéro du PC sur lequel vous lancez le programme.
+    - Indiquer vous êtes le dernier hôte de l'anneau.
+    - Saisir l'adresse IP de l'hôte suivant (ex: si vous êtes l'hôte 2 vous saisissez l'adresse IP de l'hôte 3).
+    - Vous pouvez maintenant envoyer des messages aux autres hôtes de l'anneau.
 
-	- pour arreter le programme faire CTRL-C
+	- Pour arreter le programme faire CTRL-C
 
