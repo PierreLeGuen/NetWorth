@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "TraitePaquet.h"
 #include <string.h>
-#include "utils/primitives.h"
+#include "../utils/primitives.h"
 #include "packetChecker.h"
 
 

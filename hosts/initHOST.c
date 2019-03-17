@@ -1,10 +1,10 @@
 #include <sys/socket.h>
 #include <stdio.h>
 #include "initHOST.h"
-#include "utils/primitives.h"
+#include "../utils/primitives.h"
 #include "string.h"
 #include <stdlib.h>
-#include <utils/userinput.h>
+#include "../utils/userinput.h"
 
 Host initPC(int numPC, bool local, bool isLastHost) {
     Host AnHost = {0};

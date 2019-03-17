@@ -13,7 +13,7 @@
 #include <stdlib.h>	// exit
 #include <string.h>	// memset
 
-#include "utils/primitives.h"
+#include "../utils/primitives.h"
 
 int creePriseReception (int port)
 {

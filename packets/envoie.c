@@ -9,7 +9,7 @@
 
 #include <unistd.h>
 
-#include "utils/primitives.h"
+#include "../utils/primitives.h"
 
 int envoie (int prise, char *buffer, size_t taille)
 {

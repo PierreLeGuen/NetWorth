@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-#include <utils/userinput.h>
 
+#include "../utils/userinput.h"
 #include "sendPacket.h"
 #include "TraitePaquet.h"
-#include "utils/primitives.h"
+#include "../utils/primitives.h"
 #include "packetChecker.h"
 
 
